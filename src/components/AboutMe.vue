@@ -1,0 +1,89 @@
+<template>
+    <div class="container">
+        <inline-svg 
+            src="../assets/user-solid.svg"
+            width="50" 
+            height="50"
+            fill="black"
+            aria-label="My image"
+            class="txt user_i"
+        ></inline-svg>
+        <h1 class="txt am_title">{{ $t('aboutme.title') }}</h1>
+        <p class="txt am_desc" data-aos="fade-right">My name is Frank, I'm a full time programmer. I dedicate myself to frontend/backend development. I've been programming since I was 13 years old, with a huge passion with scripting on small servers. I've done small and big projects in which I've put my full potential to learn new technologies and techniques to apply to my day-to-day habits. My goal is to achieve excellence and optimize my work as much as I can.</p>
+
+        <p class="txt am_desc" data-aos="fade-right">8 Years of experience in the Programming and Scripting field. I'm focused in the development of Android and Windows based applications using Java, C# (ASP.NET) and C++. I'm also able to develop Web pages using HTML, CSS and jQuery to ensure quality, balanced interactions and aesthetics. I use or create the adequate tools and utilities when it comes to programming major projects to ensure effectiveness and tidiness in my coding.</p>
+
+        <p class="txt am_desc" data-aos="fade-right">When I'm not developing major applications, I normally dedicate myself to developing small scripts and applications for personal and testing purposes. Some of these small projects range from python scripts to GUI applications with basic interactions.</p>
+
+        <p class="txt am_desc" data-aos="fade-right">As of lately, I've been programming and testing a lot of backend systems for Java and Javascript, which has opened new doors in my passion for programming. In addition, I've also been testing and trying out different known API's and SDK's (Facebook, YouTube, Twitter, Google, etc..) to get accustomed to possible future embeddings in my applications.</p>
+
+        <p class="txt am_desc" data-aos="fade-right">Although my interests are mainly based on programming and electronics, I also dedicate some of my time to translation. I can speak Spanish, English, French, Chinese and Japanese. These linguistic tools have not only allowed me to create localization systems in my applications, but also allowed me to subtitle and translate many works from my favorite series. One of my biggest contributions was to translate the Multiplayer Modification for GTA San Andreas, Multi Theft Auto to Spanish and Japanese.</p>
+
+        <p class="txt am_desc" data-aos="fade-right">In my free time I dedicate myself to listening to music, watching videos, strolling, cooking, gaming, and admin on forums. However, most of the time, I'll find myself bug fixing and adding new code to my projects, as there is always time for improvement and development!</p>
+    </div>
+</template>
+
+<script setup>
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+import { watch, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { SUPPORT_LOCALES as supportLocales, setI18nLanguage } from '../i18n';
+
+const { locale } = useI18n({ useScope: 'global' });
+watch(locale, (val) => {
+  setI18nLanguage(val);
+});
+
+onMounted(() => {
+        AOS.init({
+            once: true
+        });
+    });
+</script>
+
+<style lang="scss">
+
+    .container {
+        width: 100%;
+        height: auto;
+
+        background-color: $bg-color;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        .user_i {
+            background-image: url("../assets/user-solid.svg");
+            background-size: 100% 100%;
+            fill: $text-color;
+            width: 50px;
+            height: 50px;
+            margin-top: 20px;
+        }
+
+        .am_title, .am_desc {
+            font-family: $ffamily;
+        }
+
+        .am_title {
+            color: $text-color;
+            font-size: 30px;
+            margin: 15px;
+        }
+
+        .am_desc {
+            margin-left: 35px;
+            margin-right: 35px;
+
+            margin-top: 25px;
+
+            text-align: center;
+        }
+    }
+
+
+</style>

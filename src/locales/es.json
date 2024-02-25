@@ -1,0 +1,11 @@
+{
+    "languages": {
+        "en": "Ingles",
+        "es": "Español",
+        "fr": "French",
+        "jp": "Japanese"
+    },
+    "aboutme": {
+        "title": "Acerca de mi"
+    }
+}

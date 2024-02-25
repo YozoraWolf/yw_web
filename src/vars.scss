@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+$primary-color: rgb(14, 107, 194);
+$bg-color: #1e1e1e;
+$text-color: rgb(255, 255, 255);
+$ffamily: "Lato", "Verdana";
+$h1_size: 30px;
+// RadialProg vars
+$stroke-color: $primary-color;
+$inner-stroke-color: lighten($bg-color, 4%);
+
+.txt {
+    font-family: $ffamily;
+    color: $text-color;
+}
+
+svg path { 
+    color: $text-color;
+    fill: $text-color;
+}
