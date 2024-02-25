@@ -106,6 +106,7 @@ const showDesc = (id) => {
 
             width: 100%;
             height: 100%;
+            will-change: transform; /* Prevents transformation bug when anim starts */
 
             .proj-label, .proj-desc {
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);

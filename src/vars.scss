@@ -9,7 +9,8 @@ $h1_size: 30px;
 $stroke-color: $primary-color;
 $inner-stroke-color: lighten($bg-color, 4%);
 
-.txt {
+
+.txt, h1, h2, h3, h4, h5, h6{
     font-family: $ffamily;
     color: $text-color;
 }
