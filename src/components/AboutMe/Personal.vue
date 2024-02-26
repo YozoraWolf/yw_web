@@ -55,6 +55,10 @@ import globe from '@assets/globe-solid.svg';
 
     .content {
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+
         .title {
             display: flex;
             flex-direction: row;

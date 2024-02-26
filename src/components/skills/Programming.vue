@@ -1,86 +1,81 @@
 <template>
+    <div class="prog_main">
+        <div class="prog_container">
 
-  <div class="prog_container">
-      
-      <div class="prog" :key="prog.idx" v-for="prog in programming">
-            <RadialProgress :diameter="100"
-                       :completedSteps="prog.proficiency"
-                       :totalSteps="100"
-                       :startColor="'var(--stroke-color)'"
-                       :stopColor="'var(--stroke-color)'"
-                       :innerStrokeColor="'var(--inner-stroke-color)'">
-                       <i :class="getIcon(prog.id)"></i>
-            </RadialProgress>
-            <span class="txt prog_p">{{prog.proficiency}}%</span>
-            <span class="txt prog_t">{{prog.name}}</span> 
-      </div>
-  </div>
+            <div class="prog_section" v-for="section in sections" :key="section.id">
+                <!-- Frontend -->
+                <h3>{{ section }}</h3>
+                <div class="prog_category">
+
+                    <div class="prog" v-for="prog in getSkillsByCategory(section.toLowerCase())" :key="prog.idx">
+                        <RadialProgress :diameter="100" :completedSteps="prog.proficiency" :totalSteps="100"
+                            :startColor="'var(--stroke-color)'" :stopColor="'var(--stroke-color)'"
+                            :innerStrokeColor="'var(--inner-stroke-color)'">
+                            <i :class="getIcon(prog.id)"></i>
+                        </RadialProgress>
+                        <h4 class="prog_title">{{ prog.proficiency }}%</h4>
+                        <h4 class="prog_title">{{ prog.name }}</h4>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
 </template>
-
+  
 <script setup>
 import RadialProgress from 'vue3-radial-progress'
-const props = defineProps(['programming']);
+import skills from '@data/programming.json';
 
-const getIcon = (icon) => {
-    switch(icon) {
-        case "azure":
-        case "json":
-        case "xml":
-            return 'devicon-devicon-plain';
-        case "raspberrypi":
-            return 'devicon-'+icon+'-line';
-        default:
-            return 'devicon-'+icon+'-plain';
-    }
-}
+const sections = ["Frontend", "Backend", "Cloud", "Tools", "DB", "Others"];
+
+const getSkillsByCategory = (category) => {
+    return skills.filter(prog => prog.cat === category);
+};
+
+const getIcon = (icon) => icon[0] === '.' ? `devicon-${icon.substring(1)}-original` : `devicon-${icon}-plain`;
+
+// Add other categories as needed
 </script>
-
+  
 <style lang="scss">
-@import "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"; 
-
-
 :root {
     --stroke-color: #{$stroke-color};
     --inner-stroke-color: #{$inner-stroke-color};
 }
 
-.prog_container {
-
+.prog_main {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
 
-    .prog {
-        width: 80px;
-        height: 80px;
-        
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .prog_category {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
 
-        margin: 65px;
-        margin-right: 35px;
-        margin-left: 30px;
+        .prog {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-        .prog_t, .prog_p {
-            text-align: center;
-            font-family: $ffamily;
-            color: $text-color;
+            margin: 10px;
+
+            .prog_title {
+                text-align: center;
+                margin: 0;
+            }
         }
 
-        .prog_t {
+
+
+        h3 {
+            font-size: 18px;
             font-weight: bold;
+            margin-bottom: 10px;
         }
-
-        i {
-            font-size: 40px;
-            color: $text-color;
-        }
-
     }
 }
-
 </style>
+  

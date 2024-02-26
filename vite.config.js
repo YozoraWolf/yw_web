@@ -7,7 +7,8 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@assets': path.resolve(__dirname, './public/assets'),
+      '@': path.resolve(__dirname, './src'),
+      '@assets': path.resolve(__dirname, './src/assets'),
       '@data': path.resolve(__dirname, './src/data'),
     },
   },

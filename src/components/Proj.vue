@@ -36,7 +36,7 @@ onMounted(() => {
 });
 
 const getImageURL = (img) => {
-    return `url(@/../assets/bgs/${img})`;
+    return `url('src/assets/bgs/${img}')`;
 }
 
 const showDesc = (id) => {

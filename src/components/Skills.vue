@@ -1,7 +1,7 @@
 <template>
     <div class="s_container">
         <h1 class="txt s_title">Skills</h1>
-        <Programming :programming="skills" />
+        <Programming/>
         <h1 class="txt s_title">Languages</h1>
         <Langs :langs="langs" />
     </div>
