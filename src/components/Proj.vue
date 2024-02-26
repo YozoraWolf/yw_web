@@ -1,21 +1,26 @@
 <template>
-    <div class="grid" >
-        <div class="box-cont" v-for="(project, idx) in projects" :key="project.id">
-            <div class="box" @click.stop="showDesc(idx)" :style="{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), ${getImageURL(project.img_url)}` }">
-                <div ref="bcnts" class="box-content" @click.stop="showDesc(idx)">
-                    <div class="proj-label" >
-                        {{ project.title }}
-                    </div>
-                    <div class="proj-desc">
-                        {{ project.desc }}
+    <div class="proj_main">
+        <h1>Projects</h1>
+        <div class="grid">
+            <div class="box-cont" v-for="(project, idx) in projects" :key="project.id">
+                <div class="box" @click.stop="showDesc(idx)"
+                    :style="{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), ${getImageURL(project.img_url)}` }">
+                    <div ref="bcnts" class="box-content" @click.stop="showDesc(idx)">
+                        <div class="proj-label">
+                            {{ project.title }}
+                        </div>
+                        <div class="proj-desc">
+                            {{ project.desc }}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="proj-icon">
-            <i v-for="lang in project.langs" :key="lang" :class="`devicon-${lang}-plain box-icon-devicon`"></i>
-            </div>
+                <div class="proj-icon">
+                    <i v-for="lang in project.langs" :key="lang" :class="`devicon-${lang}-plain box-icon-devicon`"></i>
+                </div>
 
+            </div>
         </div>
+
     </div>
 </template>
 
@@ -54,103 +59,110 @@ const showDesc = (id) => {
         duration: 500,
         easing: 'easeInOutQuad'
     });
-    
+
 }
 </script>
 
 <style lang="scss">
+.proj_main {
+    margin-left: 5px;
+    margin-right: 5px;
 
-// TODO: Y - Axis bugs when animejs starts.
-
-// styles
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 5%;
-}
-
-.box-cont {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-
-    .box {
-        
-        width: 400px;
-        height: 400px;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        border-radius: 25%;
-
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        padding: 20px;
-        margin: 20px;
-        overflow: hidden;
-        
-        user-select: none;
-        cursor: pointer;
-
-        .box-content {
-            display: block;
-            min-width: 100%;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-
-            width: 100%;
-            height: 100%;
-            will-change: transform; /* Prevents transformation bug when anim starts */
-
-            .proj-label, .proj-desc {
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-                text-align: center;
-                display: inline-block;
-                position: absolute;
-                width: auto;
-                height: auto;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-
-            .proj-label {
-                font-family: "Lato", sans-serif;
-                font-size: 24px;
-                font-weight: bold;
-                text-align: center;
-                left: 50%;
-            }
-
-            .proj-desc {
-                left: 150%;
-                width: 90%;
-            }
-
-        }
-
-
-    }
-
-    .proj-icon {
-        font-size: 24px;
-        margin-bottom: 5px;
+    h1 {
         text-align: center;
-        i {
-            margin-left: 10px;
-            margin-right: 10px;
-            font-size: 40px;
-        
-        }
     }
 
-    
-}
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        margin-bottom: 5%;
+    }
 
+    .box-cont {
+        position: relative;
+        width: auto;
+        overflow: hidden;
+
+
+        .box {
+
+            width: 350px;
+            height: 350px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30%;
+
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            padding: 20px;
+            margin: 20px;
+            overflow: hidden;
+
+            user-select: none;
+            cursor: pointer;
+
+            .box-content {
+                display: block;
+                min-width: 100%;
+                text-align: center;
+                padding: 0;
+                margin: 0;
+
+                width: 100%;
+                height: 100%;
+                will-change: transform;
+                /* Prevents transformation bug when anim starts */
+
+                .proj-label,
+                .proj-desc {
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+                    text-align: center;
+                    display: inline-block;
+                    position: absolute;
+                    width: auto;
+                    height: auto;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                .proj-label {
+                    font-family: "Lato", sans-serif;
+                    font-size: 24px;
+                    font-weight: bold;
+                    text-align: center;
+                    left: 50%;
+                }
+
+                .proj-desc {
+                    left: 150%;
+                    width: 90%;
+                }
+
+            }
+
+
+        }
+
+        .proj-icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+            text-align: center;
+
+            i {
+                margin-left: 10px;
+                margin-right: 10px;
+                font-size: 40px;
+
+            }
+        }
+
+
+    }
+}
 </style>

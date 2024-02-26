@@ -28,7 +28,7 @@
 import RadialProgress from 'vue3-radial-progress'
 import skills from '@data/programming.json';
 
-const sections = ["Programming", "Frontend", "Backend", "DB", "Tools", "Cloud", "Others", ];
+const sections = ["Programming", "Frontend", "Backend", "DB", "Tools", "Cloud", "Others",];
 
 const getSkillsByCategory = (category) => {
     return skills.filter(prog => prog.cat === category);

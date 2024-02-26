@@ -1,14 +1,14 @@
 <template>
     <div class="container">
         <inline-svg src="../assets/user-solid.svg" width="50" height="50" fill="black" aria-label="My image"
-                    class="txt user_i"></inline-svg>
+            class="txt user_i"></inline-svg>
         <h1 class="txt am_title">{{ $t('aboutme.title') }}</h1>
         <div class="grid">
             <div class="grid-item">
-                <Personal/>
+                <Personal />
             </div>
             <div class="grid-item">
-                <TechStack/>
+                <TechStack />
             </div>
         </div>
     </div>
@@ -48,7 +48,7 @@ onMounted(() => {
 
     align-items: center;
 
-    
+
     .grid {
         display: grid;
         width: 100%;
@@ -58,7 +58,7 @@ onMounted(() => {
         grid-gap: 20px;
 
 
-        
+
         .grid-item {
             display: flex;
             justify-content: center;
