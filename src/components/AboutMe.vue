@@ -17,7 +17,7 @@
 <script setup>
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Personal from './AboutMe/Personal.vue';
+import Personal from '@components/AboutMe/Personal.vue';
 import TechStack from './AboutMe/TechStack.vue';
 
 import { watch, onMounted } from 'vue';

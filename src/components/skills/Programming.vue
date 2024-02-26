@@ -28,7 +28,7 @@
 import RadialProgress from 'vue3-radial-progress'
 import skills from '@data/programming.json';
 
-const sections = ["Frontend", "Backend", "Cloud", "Tools", "DB", "Others"];
+const sections = ["Programming", "Frontend", "Backend", "DB", "Tools", "Cloud", "Others", ];
 
 const getSkillsByCategory = (category) => {
     return skills.filter(prog => prog.cat === category);
@@ -48,32 +48,50 @@ const getIcon = (icon) => icon[0] === '.' ? `devicon-${icon.substring(1)}-origin
 .prog_main {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-    .prog_category {
-        margin-bottom: 20px;
+    h3 {
+        width: fit-content;
+        font-size: 24px;
+        flex: 0;
+    }
+
+    .prog_section {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        .prog {
+
+        .prog_category {
+            margin-bottom: 20px;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
-            align-items: center;
+            align-content: center;
 
-            margin: 10px;
+            .prog {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
-            .prog_title {
-                text-align: center;
-                margin: 0;
+                margin: 10px;
+
+                .prog_title {
+                    text-align: center;
+                    margin: 0;
+                }
             }
-        }
 
 
 
-        h3 {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
+            h3 {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
         }
     }
 }

@@ -21,19 +21,19 @@
         "id": "csharp",
         "name": "C#",
         "proficiency": 70.0,
-        "cat": "backend"
+        "cat": "programming"
     },
     {
         "id": "java",
         "name": "Java",
         "proficiency": 80.0,
-        "cat": "backend"
+        "cat": "programming"
     },
     {
         "id": "python",
         "name": "Python",
         "proficiency": 70.0,
-        "cat": "backend"
+        "cat": "programming"
     },
     {
         "id": "html5",
@@ -81,7 +81,7 @@
         "id": "lua",
         "name": "LUA",
         "proficiency": 80.0,
-        "cat": "script"
+        "cat": "others"
     },
     {
         "id": "cplusplus",
@@ -105,25 +105,25 @@
         "id": "json",
         "name": "JSON",
         "proficiency": 100.0,
-        "cat": "tools"
+        "cat": "others"
     },
     {
         "id": "xml",
         "name": "XML",
         "proficiency": 100.0,
-        "cat": "tools"
+        "cat": "others"
     },
     {
         "id": "spring",
         "name": "SpringBoot",
         "proficiency": 80.0,
-        "cat": "framework"
+        "cat": "backend"
     },
     {
         "id": "android",
         "name": "Android",
         "proficiency": 70.0,
-        "cat": "environments"
+        "cat": "others"
     },
     {
         "id": "docker",
@@ -132,16 +132,10 @@
         "cat": "tools"
     },
     {
-        "id": "bootstrap",
-        "name": "Bootstrap",
-        "proficiency": 80.0,
-        "cat": "frontend"
-    },
-    {
         "id": "dotnetcore",
         "name": ".NET",
         "proficiency": 60.0,
-        "cat": "backend"
+        "cat": "programming"
     },
     {
         "id": "axios",
@@ -165,7 +159,7 @@
         "id": "linux",
         "name": "Linux",
         "proficiency": 68.0,
-        "cat": "environments"
+        "cat": "others"
     },
     {
         "id": "bash",
