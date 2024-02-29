@@ -84,6 +84,8 @@ const showDesc = (id) => {
         width: auto;
         overflow: hidden;
 
+        margin: 0 auto;
+
 
         .box {
 
