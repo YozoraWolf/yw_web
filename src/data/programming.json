@@ -120,6 +120,18 @@
         "cat": "backend"
     },
     {
+        "id": ".express",
+        "name": "ExpressJS",
+        "proficiency": 70.0,
+        "cat": "backend"
+    },
+    {
+        "id": "nestjs",
+        "name": "NestJS",
+        "proficiency": 65.0,
+        "cat": "backend"
+    },
+    {
         "id": "android",
         "name": "Android",
         "proficiency": 70.0,
@@ -186,6 +198,12 @@
         "cat": "db"
     },
     {
+        "id": "cosmosdb",
+        "name": "CosmosDB",
+        "proficiency": 70.0,
+        "cat": "others"
+    },
+    {
         "id": "jira",
         "name": "Jira",
         "proficiency": 75.0,
@@ -202,5 +220,84 @@
         "name": "Raspberry Pi",
         "proficiency": 75.0,
         "cat": "others"
+    },
+    {
+        "id": "socketio",
+        "name": "SocketIO",
+        "proficiency": 75.0,
+        "cat": "others"
+    },
+    {
+        "id": "confluence",
+        "name": "Confluence",
+        "proficiency": 70.0,
+        "cat": "tools"
+    },    
+    {
+        "id": "html5",
+        "name": "HTML",
+        "proficiency": 100.0,
+        "cat": "others"
+    },
+    {
+        "id": "css3",
+        "name": "CSS3",
+        "proficiency": 100.0,
+        "cat": "others"
+    },    
+    {
+        "id": ".electron",
+        "name": "Electron",
+        "proficiency": 70.0,
+        "cat": "others"
+    },
+    {
+        "id": "postman",
+        "name": "Postman",
+        "proficiency": 70.0,
+        "cat": "tools"
+    },
+    {
+        "id": "git",
+        "name": "Git",
+        "proficiency": 90.0,
+        "cat": "tools"
+    },
+    {
+        "id": "github",
+        "name": "Github",
+        "proficiency": 90.0,
+        "cat": "tools"
+    },
+    {
+        "id": "jenkins",
+        "name": "Jenkins",
+        "proficiency": 70.0,
+        "cat": "tools"
+    },
+    {
+        "id": "jquery",
+        "name": "JQuery",
+        "proficiency": 70.0,
+        "cat": "others"
+    }
+    ,
+    {
+        "id": "swagger",
+        "name": "Swagger",
+        "proficiency": 65.0,
+        "cat": "tools"
+    },
+    {
+        "id": "vscode",
+        "name": "VSCode",
+        "proficiency": 80.0,
+        "cat": "tools"
+    },
+    {
+        "id": "slack",
+        "name": "Slack",
+        "proficiency": 85.0,
+        "cat": "tools"
     }
 ]

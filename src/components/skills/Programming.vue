@@ -71,6 +71,8 @@ const getIcon = (icon) => icon[0] === '.' ? `devicon-${icon.substring(1)}-origin
             justify-content: center;
             align-content: center;
 
+            flex-wrap: wrap;
+
             .prog {
                 display: flex;
                 flex-direction: column;
@@ -78,6 +80,10 @@ const getIcon = (icon) => icon[0] === '.' ? `devicon-${icon.substring(1)}-origin
                 align-items: center;
 
                 margin: 10px;
+
+                i {
+                    font-size: 40px;
+                }
 
                 .prog_title {
                     text-align: center;

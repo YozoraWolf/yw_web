@@ -1,17 +1,21 @@
 <template>
     <div class="main-div">
-        <LangSelect />
-        <Welcome />
-        <AboutMe />
-        <Skills />
-        
-        <!--<Projects />-->
-        <Proj />
-        <Footer />
+        <perfect-scrollbar>
+            <LangSelect />
+            <Welcome />
+            <AboutMe />
+            <Skills />
+
+            <!--<Projects />-->
+            <Proj />
+            <Footer />
+        </perfect-scrollbar>
     </div>
 </template>
 
 <script>
+import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
+
 import Welcome from './components/Welcome.vue';
 import AboutMe from './components/AboutMe.vue';
 import Skills from './components/Skills.vue';
@@ -23,7 +27,7 @@ import LangSelect from './components/LangSelect.vue';
 export default {
     name: 'App',
     metaInfo: {
-      title: 'YozoraWolf'
+        title: 'YozoraWolf'
     },
     components: {
         Welcome,
@@ -32,7 +36,8 @@ export default {
         Projects,
         Proj,
         Footer,
-        LangSelect
+        LangSelect,
+        PerfectScrollbar
     },
     methods: {
     }
@@ -40,14 +45,25 @@ export default {
 </script>
 
 <style lang="scss">
+@import "vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css";
 
 body {
     margin: 0;
     padding: 0;
 }
 
- p, h1, h2, h3, h4, .main-div {
+p,
+h1,
+h2,
+h3,
+h4,
+.main-div {
     color: $text-color;
     background-color: $bg-color;
- }
+}
+
+.main-div {
+    height: 100vh; 
+    overflow: auto;
+}
 </style>

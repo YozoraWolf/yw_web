@@ -24,15 +24,16 @@
         "country": "jp"
     },
     {
-        "name": "German",
+        "name": "Chinese",
         "proficiency": 30.0,
         "certs": [],
-        "country": "de"
+        "country": "cn"
     },
     {
-        "name": "Chinese",
+        "name": "German",
         "proficiency": 20.0,
         "certs": [],
-        "country": "cn"
+        "country": "de"
     }
+
 ]
