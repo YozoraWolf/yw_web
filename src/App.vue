@@ -5,9 +5,7 @@
             <Welcome />
             <AboutMe />
             <Skills />
-
-            <!--<Projects />-->
-            <Proj />
+            <Projects/>
             <Footer />
         </perfect-scrollbar>
     </div>
@@ -20,7 +18,7 @@ import Welcome from './components/Welcome.vue';
 import AboutMe from './components/AboutMe.vue';
 import Skills from './components/Skills.vue';
 import Projects from './components/Projects.vue';
-import Proj from './components/Proj.vue';
+import Projects from './components/Projects.vue';
 import Footer from './components/Footer.vue';
 import LangSelect from './components/LangSelect.vue';
 
