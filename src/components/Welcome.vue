@@ -3,7 +3,7 @@
         <div class="welcome-head">
             <div class="welcome-text">
                 <svg class="txt icon"></svg>
-                <div class="txt title"><b>Y</b>ozora<b>W</b>olf</div>
+                <div class="txt title"></div>
                 <h2 class="txt sub">Full-Stack Programmer</h2>
             </div>
         </div> 

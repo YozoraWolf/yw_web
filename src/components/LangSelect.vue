@@ -1,10 +1,10 @@
 <template>
     <div class="lang-select" ref="langSelect">
-        <img src="https://flagcdn.com/h20/us.png" @click="changeLang('en')" class="lang">
-        <img src="https://flagcdn.com/h20/mx.png" @click="changeLang('es')" class="lang">
-        <img src="https://flagcdn.com/h20/fr.png" @click="changeLang('fr')" class="lang">
-        <img src="https://flagcdn.com/h20/jp.png" @click="changeLang('jp')" class="lang">
-        <div class="sel-lang" @click="toggleLangs" :style="{'backgroundImage': getFlag(selLang)}"></div>
+        <img src="https://flagcdn.com/w80/us.png" @click="changeLang('en')" class="lang">
+        <img src="https://flagcdn.com/w80/mx.png" @click="changeLang('es')" class="lang">
+        <img src="https://flagcdn.com/w80/fr.png" @click="changeLang('fr')" class="lang">
+        <img src="https://flagcdn.com/w80/jp.png" @click="changeLang('jp')" class="lang">
+        <img :src="getFlag(selLang)" class="sel-lang" @click="toggleLangs" >
     </div>
 </template>
 
@@ -17,7 +17,7 @@ let selLang = ref('en');
 let showLangs = ref(true);
 
 // generate changeLang method
-const { locale, t } = useI18n({ useScope: 'global' });
+const { locale } = useI18n({ useScope: 'global' });
 
 const changeLang = (lang) => {
     selLang.value = lang;
@@ -34,7 +34,7 @@ const flags = {
 }
 
 const getFlag = (lang) => {
-    return `url("https://flagcdn.com/h20/${flags[lang]}.png")`;
+    return `https://flagcdn.com/w80/${flags[lang]}.png`;
 }
 
 const toggleLangs = () => {
@@ -117,7 +117,8 @@ const initLangUI = () => {
     }
 
     .sel-lang {
-        background-image: url("https://flagcdn.com/h20/us.png");
+        
+        background-image: url("https://flagcdn.com/w80/us.png");
         transition: 0.3s ease-in-out;
 
         &:hover {
@@ -127,14 +128,15 @@ const initLangUI = () => {
     }
 
     .lang, .sel-lang {
-        height: 25px;
-        width: 25px;
+        height: 60px;
+        width: 80px;
         cursor: pointer;
+        user-select: none;
         
         background-position: center;
-        background-size: cover;
+        background-size:inherit;
         background-repeat: no-repeat;
-        border-radius: 100%;
+        border-radius: 20%;
 
         transition: 0.3s ease-in-out;
         

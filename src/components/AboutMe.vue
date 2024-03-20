@@ -19,15 +19,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Personal from '@components/AboutMe/Personal.vue';
 import TechStack from './AboutMe/TechStack.vue';
-
-import { watch, onMounted } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { SUPPORT_LOCALES as supportLocales, setI18nLanguage } from '../i18n';
-
-const { locale } = useI18n({ useScope: 'global' });
-watch(locale, (val) => {
-    setI18nLanguage(val);
-});
+import { onMounted } from 'vue';
 
 onMounted(() => {
     AOS.init({

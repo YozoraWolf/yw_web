@@ -5,8 +5,8 @@ let i18n;
 
 export const SUPPORT_LOCALES = ['en', 'es', 'fr', 'jp'];
 
-export function setI18nLanguage(locale) {
-  loadLocaleMessages(locale);
+export async function setI18nLanguage(locale) {
+  await loadLocaleMessages(locale);
 
   if (i18n.mode === 'legacy') {
     i18n.global.locale = locale;
@@ -18,11 +18,14 @@ export function setI18nLanguage(locale) {
   localStorage.setItem('lang', locale);
 }
 
+
+// TODO: Fix locale messages loading
 export async function loadLocaleMessages(locale) {
   // load locale messages with dynamic import
-  const messages = await import(
-    /* webpackChunkName: "locale-[request]" */ `./locales/${locale}.json`
-  );
+  const messages = await fetch(`/locales/${locale}.json`);
+
+  console.log(`Loaded messages for ${locale}:`, messages.default); // Add this line
+
 
   // set locale and locale message
   i18n.global.setLocaleMessage(locale, messages.default);
@@ -38,7 +41,7 @@ export default function setupI18n() {
       globalInjection: true,
       legacy: false,
       locale: locale,
-      fallbackLocale: 'en '
+      fallbackLocale: 'en'
     });
 
     setI18nLanguage(locale);
