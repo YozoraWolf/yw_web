@@ -6,6 +6,8 @@
         "jp": "Japanese"
     },
     "aboutme": {
-        "title": "Acerca de mi"
+        "title": "Acerca de mi",
+        "position": "",
+        "polyglot": ""
     }
 }

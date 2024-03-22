@@ -45,7 +45,7 @@ const toggleLangs = () => {
             targets: '.lang-select > .lang',
             translateX: 0,
             opacity: 1,
-            duration: 300,
+            duration: 50,
             easing: 'linear',
         });
     } else {
@@ -53,7 +53,7 @@ const toggleLangs = () => {
             targets: '.lang-select > .lang',
             translateX: 100,
             opacity: 0,
-            duration: 300,
+            duration: 50,
             easing: 'linear'
         });
     }
