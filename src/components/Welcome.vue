@@ -3,15 +3,14 @@
         <div class="welcome-head">
             <div class="welcome-text">
                 <svg class="txt icon"></svg>
-                <div class="txt title"></div>
-                <h2 class="txt sub">Full-Stack Programmer</h2>
-            </div>
+                <div class="txt title"> {{ $t('welcome.name') }}</div>
+                <h2 class="txt sub">{{ $t('welcome.title') }}</h2>
+            </div>template
         </div> 
     </div>
 </template>
 
 <script setup>
-
 </script>
 
 <style lang="scss" scoped>

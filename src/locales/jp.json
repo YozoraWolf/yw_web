@@ -1,13 +1,74 @@
 {
     "languages": {
-        "en": "English",
-        "es": "Spanish",
-        "fr": "French",
-        "jp": "Japanese"
+        "en": "英語",
+        "es": "スペイン語",
+        "fr": "フランス語",
+        "jp": "日本語"
     },
     "aboutme": {
         "title": "私について",
-        "position": "",
-        "polyglot": ""
+        "position": "フルスタック開発者",
+        "polyglot": "多言語",
+        "age": "２８歳",
+        "frontend": "フロントエンド",
+        "backend": "バックエンド",
+        "cloud": "クラウド"
+    },
+    "welcome": {
+        "name": " *夜*空*ウ*ルフ",
+        "title": "フルスタック開発者"
+    },
+    "skills": {
+        "title": "スキル",
+        "Frontend": "フロントエンド",
+        "Backend": "バックエンド",
+        "Cloud": "クラウド",
+        "DB": "データベース",
+        "Tools": "ツール",
+        "Others": "その他"
+    },
+    "langs": {
+        "title": "言語",
+        "english": "英語",
+        "spanish": "スペイン語",
+        "french": "フランス語",
+        "japanese": "日本語",
+        "chinese": "中国語",
+        "german": "ドイツ語"
+    },
+    "projects": {
+        "title": "プロジェクト",
+        "downlooru": {
+            "title": "",
+            "desc": ""
+        },
+        "csflopapp": {
+            "title": "",
+            "desc": ""
+        },
+        "csfhazapp": {
+            "title": "",
+            "desc": ""
+        },
+        "botbrico": {
+            "title": "",
+            "desc": ""
+        },
+        "acuacar": {
+            "title": "",
+            "desc": ""
+        },
+        "smartgreen": {
+            "title": "",
+            "desc": ""
+        },
+        "fira": {
+            "title": "",
+            "desc": ""
+        },
+        "OFTS": {
+            "title": "",
+            "desc": ""
+        }
     }
 }

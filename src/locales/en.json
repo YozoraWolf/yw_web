@@ -5,9 +5,70 @@
         "fr": "French",
         "jp": "Japanese"
     },
+    "welcome": {
+        "name": "*Y*ozora*W*olf",
+        "title": "Full Stack Developer"
+    },
     "aboutme": {
         "title": "About Me",
         "position": "Full Stack Programmer",
-        "polyglot": "Polyglot"
+        "polyglot": "Polyglot",
+        "age": "28 years old",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "cloud": "Cloud"
+    },
+    "skills": {
+        "title": "Skills",
+        "Frontend": "Frontend",
+        "Backend": "Backend",
+        "Cloud": "Cloud",
+        "DB": "Database",
+        "Tools": "Tools",
+        "Others": "Others"
+    },
+    "langs": {
+        "title": "Languages",
+        "english": "English",
+        "spanish": "Spanish",
+        "french": "French",
+        "japanese": "Japanese",
+        "chinese": "Chinese",
+        "german": "German"
+    },
+    "projects": {
+        "title": "Projects",
+        "downlooru": {
+            "title": "Downlooru",
+            "desc": "A simple download manager for Windows"
+        },
+        "csflopapp": {
+            "title": "CSFlopApp",
+            "desc": "A simple web application to calculate the probability of getting a certain hand in poker"
+        },
+        "csfhazapp": {
+            "title": "CSFHazApp",
+            "desc": "A simple web application to calculate the probability of getting a certain hand in Hearthstone"
+        },
+        "botbrico": {
+            "title": "Botbrico",
+            "desc": "A simple Discord bot to manage a server"
+        },
+        "acuacar": {
+            "title": "Acuacar",
+            "desc": "A simple web application to calculate the amount of sugar in a drink"
+        },
+        "smartgreen": {
+            "title": "SmartGreen",
+            "desc": "A simple web application to calculate the amount of water in a drink"
+        },
+        "fira": {
+            "title": "Fira",
+            "desc": "A simple web application to calculate the amount of water in a drink"
+        },
+        "OFTS": {
+            "title": "OFTS",
+            "desc": "A simple web application to calculate the amount of water in a drink"
+        }
     }
 }

@@ -1,13 +1,74 @@
 {
     "languages": {
-        "en": "English",
-        "es": "Spanish",
-        "fr": "French",
-        "jp": "Japanese"
+        "en": "Anglais",
+        "es": "Espagnol",
+        "fr": "Français",
+        "jp": "Japonais"
     },
     "aboutme": {
         "title": "Sur moi",
-        "position": "",
-        "polyglot": ""
+        "position": "Programmeur Full Stack",
+        "polyglot": "Polyglotte",
+        "age": "28 ans",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "cloud": "Cloud"
+    },
+    "welcome": {
+        "name": "*Y*ozora*W*olf",
+        "title": "Programmeur Full Stack"
+    },
+    "skills": {
+        "title": "Compétences",
+        "Frontend": "Frontend",
+        "Backend": "Backend",
+        "Cloud": "Cloud",
+        "DB": "Base de données",
+        "Tools": "Outils",
+        "Others": "Autres"
+    },
+    "langs": {
+        "title": "Langues",
+        "english": "Anglais",
+        "spanish": "Espagnol",
+        "french": "Français",
+        "japanese": "Japonais",
+        "chinese": "Chinois",
+        "german": "Allemand"
+    },
+    "projects": {
+        "title": "Projets",
+        "downlooru": {
+            "title": "",
+            "desc": ""
+        },
+        "csflopapp": {
+            "title": "",
+            "desc": ""
+        },
+        "csfhazapp": {
+            "title": "",
+            "desc": ""
+        },
+        "botbrico": {
+            "title": "",
+            "desc": ""
+        },
+        "acuacar": {
+            "title": "",
+            "desc": ""
+        },
+        "smartgreen": {
+            "title": "",
+            "desc": ""
+        },
+        "fira": {
+            "title": "",
+            "desc": ""
+        },
+        "OFTS": {
+            "title": "",
+            "desc": ""
+        }
     }
 }
