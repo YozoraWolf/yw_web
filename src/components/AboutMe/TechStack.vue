@@ -4,22 +4,22 @@
             <inline-svg :src="layer_group" width="50" height="50" fill="black" aria-label="" class="icon"></inline-svg>
         </div>
         <div class="content">
-            <h1 class="title">Tech Stack</h1>
+            <h1 class="title">{{ $t('aboutme.techstack') }}</h1>
             <div class="stacks">
                 <div class="frontend-stack">
-                    <h3>Frontend</h3>
+                    <h3>{{ $t('aboutme.frontend') }}</h3>
                     <div class="icon-row">
                         <i v-for="icon in frontendIcons" :key="icon" :class="`devicon-${icon}-plain colored`"></i>
                     </div>
                 </div>
                 <div class="backend-stack">
-                    <h3>Backend</h3>
+                    <h3>{{ $t('aboutme.backend') }}</h3>
                     <div class="icon-row">
                         <i v-for="icon in backendIcons" :key="icon" :class="`${getIcon(icon)} colored`"></i>
                     </div>
                 </div>
                 <div class="cloud-stack">
-                    <h3>Cloud</h3>
+                    <h3>{{ $t('aboutme.cloud') }}</h3>
                     <div class="icon-row">
                         <i v-for="icon in cloudIcons" :key="icon" :class="`${getIcon(icon)} colored`"></i>
                     </div>
@@ -76,6 +76,8 @@ const getIcon = (icon) => icon[0] === '.' ? `devicon-${icon.substring(1)}-origin
         .stacks {
             display: flex;
             justify-content: space-between;
+
+            white-space: nowrap;
 
             .frontend-stack,
             .backend-stack {

@@ -1,8 +1,7 @@
 <template>
 
   <div class="lang_container">
-      
-      <div class="lang" :key="lang.id" v-for="lang in langs">
+      <div class="lang" :key="lang.id" v-for="(lang, code) in langs">
             <RadialProgress :diameter="100"
                        :completedSteps="lang.proficiency"
                        :totalSteps="100"
@@ -12,16 +11,15 @@
             <img :src="'https://flagcdn.com/h60/'+lang.country+'.png'"
             >
             </RadialProgress>
-            <span class="txt lang_p">{{lang.proficiency}}%</span>
-            <span class="txt lang_t">{{lang.name}}</span> 
+            <span class="txt lang_p">{{ lang.proficiency }}%</span>
+            <span class="txt lang_t">{{ $t(`langs.${code}`) }}</span> 
       </div>
   </div>
 </template>
 
 <script setup>
 import RadialProgress from 'vue3-radial-progress'
-
-const props = defineProps(['langs']);
+import langs from '@data/langs.json';
 
 </script>
 

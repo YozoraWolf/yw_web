@@ -2,20 +2,20 @@
     <div class="proj_main">
         <h1>Projects</h1>
         <div class="grid">
-            <div class="box-cont" v-for="(project, idx) in projects" :key="project.id">
-                <div class="box" @click.stop="showDesc(idx)"
+            <div class="box-cont" v-for="(project, code) in projects" :key="project.id">
+                <div class="box" @click.stop="showDesc(code)"
                     :style="{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), ${getImageURL(project.img_url)}` }">
-                    <div ref="bcnts" class="box-content" @click.stop="showDesc(idx)">
+                    <div ref="bcnts" class="box-content" @click.stop="showDesc(code)">
                         <div class="proj-label">
-                            {{ project.title }}
+                            {{ $t(`projects.${code}.title`) }}
                         </div>
                         <div class="proj-desc">
-                            {{ project.desc }}
+                            {{ $t(`projects.${code}.desc`)  }}
                         </div>
                     </div>
                 </div>
                 <div class="proj-icon">
-                    <i v-for="lang in project.langs" :key="lang" :class="`devicon-${lang}-plain box-icon-devicon`"></i>
+                    <i v-for="lang in code.langs" :key="lang" :class="`devicon-${lang}-plain box-icon-devicon`"></i>
                 </div>
 
             </div>
@@ -34,10 +34,10 @@ const bcnts = ref([]);
 
 onMounted(() => {
     // Fetch data from "data/projects.json" and assign it to the projects ref
-    projects.value = projectsData.map(project => ({
-        ...project,
-        showDesc: false
-    }));
+    projects.value = Object.keys(projectsData).reduce((acc, key) => {
+        acc[key] = { ...projectsData[key], showDesc: false };
+        return acc;
+    }, {});
 });
 
 const getImageURL = (img) => {
@@ -46,8 +46,8 @@ const getImageURL = (img) => {
 
 const showDesc = (id) => {
 
-    const proj = toRaw(projects.value[id]);
-    const bcnt = bcnts.value[id];
+    const proj = toRaw(projects.value)[id];
+    const bcnt = toRaw(bcnts.value)[Object.keys(projects.value).indexOf(id)];
 
     proj.showDesc = !proj.showDesc;
 
@@ -139,6 +139,7 @@ const showDesc = (id) => {
                     font-weight: bold;
                     text-align: center;
                     left: 50%;
+                    white-space: nowrap;
                 }
 
                 .proj-desc {

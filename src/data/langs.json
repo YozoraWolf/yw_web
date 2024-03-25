@@ -1,39 +1,38 @@
-[
-    {
+{
+    "en": {
         "name": "English",
         "proficiency": 100.0,
         "certs": ["TOEFL - 89 pts"],
         "country": "us"
     },
-    {
+    "es": {
         "name": "Spanish",
         "proficiency": 100.0,
         "certs": ["Mother Tongue"],
-        "country": "ve"
+        "country": "mx"
     },
-    {
+    "fr":{
         "name": "French",
         "proficiency": 90.0,
         "certs": ["DELF B1"],
         "country": "fr"
     },
-    {
+    "jp": {
         "name": "Japanese",
         "proficiency": 90.0,
         "certs": ["Japanese Language Proficiency Test (JLPT) N2"],
         "country": "jp"
     },
-    {
+    "zh": {
         "name": "Chinese",
         "proficiency": 30.0,
         "certs": [],
         "country": "cn"
     },
-    {
+    "de": {
         "name": "German",
         "proficiency": 20.0,
         "certs": [],
         "country": "de"
     }
-
-]
+}

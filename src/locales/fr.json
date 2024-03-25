@@ -1,9 +1,12 @@
 {
-    "languages": {
+    "langs": {
+        "title": "Langues",
         "en": "Anglais",
         "es": "Espagnol",
         "fr": "Français",
-        "jp": "Japonais"
+        "jp": "Japonais",
+        "zh": "Chinois",
+        "de": "Allemand"
     },
     "aboutme": {
         "title": "Sur moi",
@@ -12,63 +15,56 @@
         "age": "28 ans",
         "frontend": "Frontend",
         "backend": "Backend",
-        "cloud": "Cloud"
+        "cloud": "Cloud",
+        "techstack": "Tech Stack"
     },
     "welcome": {
-        "name": "*Y*ozora*W*olf",
+        "name": "YozoraWolf",
         "title": "Programmeur Full Stack"
     },
     "skills": {
         "title": "Compétences",
-        "Frontend": "Frontend",
-        "Backend": "Backend",
-        "Cloud": "Cloud",
-        "DB": "Base de données",
-        "Tools": "Outils",
-        "Others": "Autres"
-    },
-    "langs": {
-        "title": "Langues",
-        "english": "Anglais",
-        "spanish": "Espagnol",
-        "french": "Français",
-        "japanese": "Japonais",
-        "chinese": "Chinois",
-        "german": "Allemand"
+        "programming": "Programmation",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "cloud": "Cloud",
+        "db": "Base de données",
+        "tools": "Outils",
+        "others": "Autres"
     },
     "projects": {
         "title": "Projets",
         "downlooru": {
-            "title": "",
-            "desc": ""
+            "title": "Downlooru",
+            "desc": "Application de téléchargement en masse pour les serveurs d'images de type Booru."
         },
         "csflopapp": {
-            "title": "",
-            "desc": ""
+            "title": "CSFlopApp",
+            "desc": "Application Android privée qui calcule des opérations mathématiques complexes dans le domaine de la sécurité industrielle."
         },
         "csfhazapp": {
-            "title": "",
-            "desc": ""
+            "title": "CSFHazApp",
+            "desc": "Application Android privée qui calcule des opérations mathématiques complexes dans le domaine de la sécurité industrielle."
         },
         "botbrico": {
-            "title": "",
-            "desc": ""
+            "title": "Bot Brico Shop",
+            "desc": "Un bot pour le Brico Shop réalisé avec MS Bot Framework."
         },
         "acuacar": {
-            "title": "",
-            "desc": ""
+            "title": "Acuacar",
+            "desc": "Un système API utilisé pour vérifier les compteurs de consommation d'eau en utilisant une IA online pour déterminer de nombreuses valeurs associées aux photos prises par les opérateurs. De nombreux contrôleurs et un système KPI sont inclus pour analyser davantage les résultats de la vérification des compteurs d'eau, soit avec une temporalité quotidienne, hebdomadaire ou mensuelle."
         },
         "smartgreen": {
-            "title": "",
-            "desc": ""
+            "title": "SmartGreen",
+            "desc": "Prise en charge ajoutée du protocole de communication MQTT, encodage des données en Base64 de/de Hexadécimal pour envoyer des messages à des appareils à faible consommation qui utilisent la technique de modulation LoRa via MQTT."
         },
         "fira": {
-            "title": "",
-            "desc": ""
+            "title": "Fira",
+            "desc": "Un système dédié au commerce électronique en direct où les clients peuvent regarder une présentation de produit, commenter et acheter des produits en direct avec une liste étendue de modes de paiement."
         },
         "OFTS": {
-            "title": "",
-            "desc": ""
+            "title": "OFMS",
+            "desc": "Système de Gestion Sur le Terrain, un système conçu pour suivre et statuer sur les projets sur le terrain pour une entreprise. Il dispose d'un portail employé où ils peuvent vérifier leurs projets assignés, mettre à jour et vérifier d'autres statuts et faire des demandes spéciales à l'entreprise lorsqu'ils sont en service sur le terrain."
         }
     }
 }

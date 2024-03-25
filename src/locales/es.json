@@ -1,9 +1,12 @@
 {
-    "languages": {
+    "langs": {
+        "title": "Idiomas",
         "en": "Ingles",
         "es": "Español",
         "fr": "Francés",
-        "jp": "Japonés"
+        "jp": "Japonés",
+        "zh": "Chino",
+        "de": "Alemán"
     },
     "aboutme": {
         "title": "Acerca de mi",
@@ -12,63 +15,56 @@
         "age": "28 años",
         "frontend": "Frontend",
         "backend": "Backend",
-        "cloud": "Cloud"
+        "cloud": "Cloud",
+        "techstack": "Tech Stack"
     },
     "welcome": {
-        "name": "*Y*ozora*W*olf",
+        "name": "YozoraWolf",
         "title": "Programador Full Stack"
     },
     "skills": {
         "title": "Habilidades",
-        "Frontend": "Frontend",
-        "Backend": "Backend",
-        "Cloud": "Cloud",
-        "DB": "Base de Datos",
-        "Tools": "Herramientas",
-        "Others": "Otros"
-    },
-    "langs": {
-        "title": "Lenguajes",
-        "english": "Ingles",
-        "spanish": "Español",
-        "french": "Francés",
-        "japanese": "Japonés",
-        "chinese": "Chino",
-        "german": "Aleman"
+        "programming": "Programación",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "cloud": "Cloud",
+        "db": "Base de Datos",
+        "tools": "Herramientas",
+        "others": "Otros"
     },
     "projects": {
         "title": "Proyectos",
         "downlooru": {
-            "title": "",
-            "desc": ""
+            "title": "Downlooru",
+            "desc": "Aplicación de descarga masiva para servidores de imágenes tipo Booru."
         },
         "csflopapp": {
-            "title": "",
-            "desc": ""
+            "title": "CSFlopApp",
+            "desc": "Aplicación privada para Android que calcula operaciones matemáticas complejas en el campo de la seguridad industrial."
         },
         "csfhazapp": {
-            "title": "",
-            "desc": ""
+            "title": "CSFHazApp",
+            "desc": "Aplicación privada para Android que calcula operaciones matemáticas complejas en el campo de la seguridad industrial."
         },
         "botbrico": {
-            "title": "",
-            "desc": ""
+            "title": "Bot Brico Tienda",
+            "desc": "Un bot para la tienda Brico hecho con MS Bot Framework."
         },
         "acuacar": {
-            "title": "",
-            "desc": ""
+            "title": "Acuacar",
+            "desc": "Un sistema de API utilizado para verificar medidores de consumo de agua utilizando una IA en línea para determinar muchos valores asociados con imágenes tomadas por operadores. Se incluyen muchos controladores y un sistema de KPI para analizar aún más los resultados de la verificación del medidor de agua ya sea con una temporalidad diaria, semanal o mensual."
         },
         "smartgreen": {
-            "title": "",
-            "desc": ""
+            "title": "SmartGreen",
+            "desc": "Se agregó soporte para el Protocolo de Comunicación MQTT, codificando datos en Base64 de/hacia Hexadecimal para enviar mensajes a dispositivos de bajo consumo que utilizan la técnica de modulación LoRa a través de MQTT."
         },
         "fira": {
-            "title": "",
-            "desc": ""
+            "title": "FIRA",
+            "desc": "Un sistema dedicado al comercio electrónico en vivo donde los clientes pueden ver una presentación del producto, comentar y comprar productos en vivo con una extensa lista de métodos de pago."
         },
         "OFTS": {
-            "title": "",
-            "desc": ""
+            "title": "OFMS",
+            "desc": "Sistema de Gestión en Campo, es un sistema hecho para llevar un registro y estado de los proyectos en campo para una empresa. Tiene un portal para empleados donde pueden verificar sus proyectos asignados, actualizar y verificar otros estados y hacer solicitudes especiales a la empresa mientras están en servicio en campo."
         }
     }
 }

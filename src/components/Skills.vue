@@ -1,41 +1,23 @@
 <template>
     <div class="s_container">
-        <h1 class="txt s_title">Skills</h1>
-        <Programming/>
-        <h1 class="txt s_title">Languages</h1>
-        <Langs :langs="langs" />
+        <h1 class="txt s_title">{{ $t('skills.title') }}</h1>
+        <Programming />
+        <h1 class="txt s_title">{{ $t('langs.title') }}</h1>
+        <Langs />
     </div>
 </template>
 
-<script>
+<script setup>
 import Programming from "./skills/Programming.vue";
 import Langs from "./skills/Langs.vue";
-
-import skills from "./../data/programming.json";
-import langs from "./../data/langs.json";
-
-export default {
-    name: "Skills",
-    setup() {
-        return {
-            skills: skills,
-            langs: langs
-        }
-    },
-    components: {
-        Programming,
-        Langs
-    }
-}
 </script>
 
 <style lang="scss">
-
-
 .s_container {
     background-color: $bg-color;
 
-    .lang_t, .lang_p {
+    .lang_t,
+    .lang_p {
         color: $text-color;
     }
 

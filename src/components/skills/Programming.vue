@@ -4,7 +4,7 @@
 
             <div class="prog_section" v-for="section in sections" :key="section.id">
                 <!-- Frontend -->
-                <h3>{{ section }}</h3>
+                <h3>{{ $t(`skills.${section.toLowerCase()}`) }}</h3>
                 <div class="prog_category">
 
                     <div class="prog" v-for="prog in getSkillsByCategory(section.toLowerCase())" :key="prog.idx">

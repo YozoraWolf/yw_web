@@ -1,12 +1,15 @@
 {
-    "languages": {
+    "langs": {
+        "title": "Languages",
         "en": "English",
         "es": "Spanish",
         "fr": "French",
-        "jp": "Japanese"
+        "jp": "Japanese",
+        "zh": "Chinese",
+        "de": "German"
     },
     "welcome": {
-        "name": "*Y*ozora*W*olf",
+        "name": "YozoraWolf",
         "title": "Full Stack Developer"
     },
     "aboutme": {
@@ -14,61 +17,54 @@
         "position": "Full Stack Programmer",
         "polyglot": "Polyglot",
         "age": "28 years old",
+        "techstack": "Tech Stack",
         "frontend": "Frontend",
         "backend": "Backend",
         "cloud": "Cloud"
     },
     "skills": {
         "title": "Skills",
-        "Frontend": "Frontend",
-        "Backend": "Backend",
-        "Cloud": "Cloud",
-        "DB": "Database",
-        "Tools": "Tools",
-        "Others": "Others"
-    },
-    "langs": {
-        "title": "Languages",
-        "english": "English",
-        "spanish": "Spanish",
-        "french": "French",
-        "japanese": "Japanese",
-        "chinese": "Chinese",
-        "german": "German"
+        "programming": "Programming",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "cloud": "Cloud",
+        "db": "Database",
+        "tools": "Tools",
+        "others": "Others"
     },
     "projects": {
         "title": "Projects",
         "downlooru": {
             "title": "Downlooru",
-            "desc": "A simple download manager for Windows"
+            "desc": "Bulk Download Application for Booru-Type Image-servers."
         },
         "csflopapp": {
             "title": "CSFlopApp",
-            "desc": "A simple web application to calculate the probability of getting a certain hand in poker"
+            "desc": "Private Android Application that calculates complex mathematical operations in the Industrial Security Field."
         },
         "csfhazapp": {
             "title": "CSFHazApp",
-            "desc": "A simple web application to calculate the probability of getting a certain hand in Hearthstone"
+            "desc": "Private Android Application that calculates complex mathematical operations in the Industrial Security Field."
         },
         "botbrico": {
-            "title": "Botbrico",
-            "desc": "A simple Discord bot to manage a server"
+            "title": "Bot Brico Shop",
+            "desc": "A Bot for the Brico Shop made with MS Bot Framework"
         },
         "acuacar": {
             "title": "Acuacar",
-            "desc": "A simple web application to calculate the amount of sugar in a drink"
+            "desc": "An API system used to check water usage meters using an Online AI to determine many values associated with pictures taken by operators. Many controllers and a KPI system is included to further analize the results of water meter check either with a daily, weekly or monthly temporality."
         },
         "smartgreen": {
             "title": "SmartGreen",
-            "desc": "A simple web application to calculate the amount of water in a drink"
+            "desc": "Added support for the MQTT Communication Protocol, encoding data in Base64 from/to Hexadecimal to send messages to low-power devices that utilize the LoRa modulation technique through MQTT."
         },
         "fira": {
             "title": "Fira",
-            "desc": "A simple web application to calculate the amount of water in a drink"
+            "desc": "A system dedicated to livestreamed e-commerce where clients can watch a product presentation, comment and purchase products live with an extensive list of payment methods."
         },
         "OFTS": {
-            "title": "OFTS",
-            "desc": "A simple web application to calculate the amount of water in a drink"
+            "title": "OFMS",
+            "desc": "On-Field Management System, is a system made to keep track and status of On-Field projects for a company. It has an empoyee portal where they can check their assigned projects, update and check other statuses and make special requests to the company while on On-Field duty."
         }
     }
 }

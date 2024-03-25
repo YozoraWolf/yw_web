@@ -4,20 +4,20 @@
             <inline-svg :src="user_tie" width="50" height="50" fill="black" aria-label="" class="icon"></inline-svg>
         </div>
         <div class="content">
-            <h1>YozoraWolf</h1>
+            <h1>{{ $t('welcome.name') }}</h1>
             <div class="title">
                 <inline-svg :src="code" width="50" height="50" fill="black" aria-label="" class="ic code"></inline-svg>
-                <h3>Full Stack Programmer</h3>
+                <h3>{{ $t('aboutme.position') }}</h3>
             </div>
             <div class="title">
                 <inline-svg :src="globe" width="50" height="50" fill="black" aria-label="" class="ic globe"></inline-svg>
-                <h3>Polyglot</h3>
+                <h3>{{ $t('aboutme.polyglot') }}</h3>
             </div>
 
             <div class="title">
                 <inline-svg :src="birthday" width="50" height="50" fill="black" aria-label=""
                     class="ic birthday"></inline-svg>
-                <h3>28 years old</h3>
+                <h3>{{ $t('aboutme.age') }}</h3>
             </div>
         </div>
     </div>

@@ -5,15 +5,18 @@
                 <svg class="txt icon"></svg>
                 <div class="txt title"> {{ $t('welcome.name') }}</div>
                 <h2 class="txt sub">{{ $t('welcome.title') }}</h2>
-            </div>template
-        </div> 
+            </div>
+        </div>
     </div>
 </template>
 
 <script setup>
 </script>
 
+
+
 <style lang="scss" scoped>
+
 .welcome-cont {
     display: flex;
     justify-content: center;
@@ -59,6 +62,7 @@
             align-items: center;
 
             z-index: 1;
+
             .icon {
                 background-image: url("./../assets/wolf.svg");
                 background-size: 100% 100%;
@@ -72,14 +76,15 @@
                 margin-left: 10px;
             }
 
-            .title, .sub {
+            .title,
+            .sub {
                 margin: 5px;
                 background-color: transparent;
             }
 
             .title {
                 color: white;
-                font-family: $ffamily;
+                font-family: 'Zen Maru Gothic', 'Lato', sans-serif;
                 font-size: 60px;
                 font-weight: 300;
 
@@ -97,6 +102,6 @@
     }
 
 
-    
+
 }
 </style>
