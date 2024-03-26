@@ -39,7 +39,7 @@
             "desc": "Bulk Download Application for Booru-Type Image-servers."
         },
         "csflopapp": {
-            "title": "CSFlopApp",
+            "title": "CSFLopApp",
             "desc": "Private Android Application that calculates complex mathematical operations in the Industrial Security Field."
         },
         "csfhazapp": {
@@ -62,7 +62,7 @@
             "title": "Fira",
             "desc": "A system dedicated to livestreamed e-commerce where clients can watch a product presentation, comment and purchase products live with an extensive list of payment methods."
         },
-        "OFTS": {
+        "ofms": {
             "title": "OFMS",
             "desc": "On-Field Management System, is a system made to keep track and status of On-Field projects for a company. It has an empoyee portal where they can check their assigned projects, update and check other statuses and make special requests to the company while on On-Field duty."
         }

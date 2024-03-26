@@ -6,14 +6,30 @@
 $primary-color: rgb(14, 107, 194);
 $bg-color: #1e1e1e;
 $text-color: rgb(255, 255, 255);
-$ffamily: "Zen Maru Gothic", "Lato", "Verdana";
+
 $h1_size: 30px;
 // RadialProg vars
 $stroke-color: $primary-color;
 $inner-stroke-color: lighten($bg-color, 4%);
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+
+    --jp-font: "Zen Maru Gothic", sans-serif;
+    --lat-font: "Lato", sans-serif;
+    --def-font: var(--lat-font);
+}
+$ffamily: var(--def-font);
+
+
 
 .txt,
+div,
+span,
 h1,
 h2,
 h3,
@@ -39,4 +55,9 @@ svg path {
         U+30A0-30FF, // Katakana
         U+4E00-9FBF, // Common and Uncommon Kanji
         U+FF00-FFEF; // Full-width Roman characters and Half-width Katakana
+}
+
+.v-popper--theme-wolf .v-popper__inner div div {
+    font-family: $ffamily;
+    font-size: 20px;
 }

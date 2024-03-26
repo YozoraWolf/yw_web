@@ -23,6 +23,8 @@ const changeLang = (lang) => {
     selLang.value = lang;
     locale.value = lang;
     localStorage.setItem('lang', lang);
+    document.documentElement.style.setProperty('--def-font', 
+    lang === 'jp' ? 'Zen Maru Gothic' : 'Lato')
     toggleLangs();
 }
 

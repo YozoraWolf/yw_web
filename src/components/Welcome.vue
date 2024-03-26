@@ -38,21 +38,6 @@
         align-items: center;
 
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: -10%;
-            left: 10%;
-            width: 100%;
-            height: 120%;
-            background: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, black 100%), url('./../assets/bgs/code_w.png') no-repeat;
-            filter: blur(2px);
-            background-size: 100% 100%;
-            perspective: 50% 50%;
-            transform: perspective(1000px) rotateY(15deg);
-            z-index: 0;
-        }
-
         .welcome-text {
             position: relative;
 
@@ -84,7 +69,7 @@
 
             .title {
                 color: white;
-                font-family: 'Zen Maru Gothic', 'Lato', sans-serif;
+                font-family: $ffamily;
                 font-size: 60px;
                 font-weight: 300;
 

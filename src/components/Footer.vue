@@ -2,65 +2,71 @@
     <div class="cont">
         <div class="section_one">
             <div class="contact_info">
-                <b class="txt name">YozoraWolf</b>
-                <i class="txt ps">Full Stack Programmer</i>
+                <span class="txt name"> {{ $t('welcome.name') }}</span>
+                <span class="txt ps">{{ $t('welcome.title') }}</span>
                 <span class="txt contact">
-                    <b>E-Mail:</b> <span class="email"
-                    v-tooltip="{ content: tip }" @click="onEmailClick($event)">yozorawolf@gmail.com</span>
+                    <inline-svg class="icon" :src="envelope" width="20" height="20" fill="black"
+                        aria-label="envelope"></inline-svg>
+                    <span>E-Mail:</span> <span class="email" v-tooltip="{ content: tip, theme: 'wolf'}"
+                        @click="onEmailClick">yozorawolf@gmail.com</span>
                 </span>
-
-              
             </div>
         </div>
         <div class="hr"></div>
         <div class="txt copy_cont">
-            <span class="txt copyr">YozoraWolf © 2024</span>
+            <inline-svg v-tooltip=" {content: 'View source on Github', theme: 'wolf'}" class="icon github" @click="openGithub" :src="github" width="40" height="40" fill="black" aria-label="github"></inline-svg>
+            <span class="txt copyr">{{ $t('welcome.name') }} © 2024</span>
         </div>
-      
-  </div>
+    </div>
 </template>
 
-<script>
+<script setup>
+import envelope from '@assets/envelope-solid.svg'
+import github from '@assets/github.svg'
+
+// TODO: Fix tooltip
 import { createTooltip, destroyTooltip } from 'floating-vue'
+import { ref } from 'vue'
 
+const clicked = ref(false)
+const tip = "Click to copy my email!"
 
-export default {
-    name: "Footer",
-    data() {
-        return {
-            clicked: false,
-            tip: "Click to copy my email!"
-        }
-    },
-    methods: {
-        onEmailClick(event) {
-            this.clicked = true;
-            
-            const tooltip = createTooltip(event.target, {
-                triggers: [],
-                content: 'Copied!',
-            });
-            tooltip.show()
-            setTimeout(() => {
-                tooltip.hide()
-                // Transition
-                setTimeout(() => {
-                destroyTooltip(event.target)
-                }, 2000)
-            }, 2200)
-            navigator.clipboard.writeText("yozorawolf@gmail.com");
-        }
-    }
+const onEmailClick = (event) => {
+    clicked.value = true;
+
+    const tooltip = createTooltip(event.target, {
+        triggers: [],
+        content: 'Copied!',
+        theme: 'wolf'
+    });
+    tooltip.show()
+    setTimeout(() => {
+        tooltip.hide()
+        // Transition
+        setTimeout(() => {
+            destroyTooltip(event.target)
+        }, 2000)
+    }, 2200)
+    navigator.clipboard.writeText("yozorawolf@gmail.com");
+}
+
+const openGithub = () => {
+    window.open('https://www.github.com/YozoraWolf', '_blank')
 }
 </script>
 
 <style lang="scss">
-@import "./../vars.scss";
 
+.cont {
+    background-color: $primary-color;
+    height: auto;
+    padding-bottom: 10px;
 
-    .cont {
-        background-color: $primary-color;
-        height: auto;
+    .icon {
+        width: 25px;
+        height: 25px;
+    }
+
 
         .section_one {
             .contact_info {
@@ -70,51 +76,68 @@ export default {
 
                 .name {
                     font-family: $ffamily;
-                    font-size:25px;
+                    font-size: 40px;
                     margin-top: 10px;
-
                 }
 
                 .ps {
-                    font-family: $ffamily;
-                    font-size: 15px;
-
+                    font-size: 25px;
                     margin-top: -5px;
-
-
                 }
 
                 .contact {
-                    font-family: $ffamily;
-                    
                     margin-top: 5px;
 
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: left;
+                    align-items: center;
+
+                    .icon {
+                        margin-right: 10px;
+                    }
+
+                    span {
+                        font-size: 20px;
+                    }
 
                     .email {
-                        font-family: $ffamily;
-                        font-size: 15px;
+                        font-size: 25px;
                         color: $text-color;
                         cursor: pointer;
+
+                        margin-left: 5px;
 
                         &:hover {
                             color: $text-color;
                             text-decoration: underline;
                         }
                     }
-
                 }
             }
         }
 
         .copy_cont {
             display: flex;
-
             justify-content: end;
+            align-items: center;
 
+            .icon {
+                margin-right: 10px;
+                width: 30px;
+                height: 30px;
+            }
+
+            .github {
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
 
             .copyr {
-                font-family: $ffamily;
                 font-style: italic;
+                font-size: 25px;
                 margin-right: 10px;
             }
         }
@@ -122,6 +145,4 @@ export default {
         .empty {
             height: 5px;
         }
-        
-    }
-</style>
+    }</style>

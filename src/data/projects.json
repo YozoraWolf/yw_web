@@ -40,5 +40,11 @@
         "title": "FIRA API",
         "desc": "A system dedicated to livestreamed e-commerce where clients can watch a product presentation, comment and purchase products live with an extensive list of payment methods.",
         "langs": ["spring", "java", "amazonwebservices"]
+    },
+    "ofms": {
+        "img_url": "main5.jpg",
+        "title": "OFMS",
+        "desc": "On-Field Management System, is a system made to keep track and status of On-Field projects for a company. It has an empoyee portal where they can check their assigned projects, update and check other statuses and make special requests to the company while on On-Field duty",
+        "langs": ["nestjs", "mongodb", "amazonwebservices"]
     }
 }

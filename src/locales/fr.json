@@ -39,7 +39,7 @@
             "desc": "Application de téléchargement en masse pour les serveurs d'images de type Booru."
         },
         "csflopapp": {
-            "title": "CSFlopApp",
+            "title": "CSFLopApp",
             "desc": "Application Android privée qui calcule des opérations mathématiques complexes dans le domaine de la sécurité industrielle."
         },
         "csfhazapp": {
@@ -62,7 +62,7 @@
             "title": "Fira",
             "desc": "Un système dédié au commerce électronique en direct où les clients peuvent regarder une présentation de produit, commenter et acheter des produits en direct avec une liste étendue de modes de paiement."
         },
-        "OFTS": {
+        "ofms": {
             "title": "OFMS",
             "desc": "Système de Gestion Sur le Terrain, un système conçu pour suivre et statuer sur les projets sur le terrain pour une entreprise. Il dispose d'un portail employé où ils peuvent vérifier leurs projets assignés, mettre à jour et vérifier d'autres statuts et faire des demandes spéciales à l'entreprise lorsqu'ils sont en service sur le terrain."
         }

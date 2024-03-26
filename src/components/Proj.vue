@@ -4,7 +4,7 @@
         <div class="grid">
             <div class="box-cont" v-for="(project, code) in projects" :key="project.id">
                 <div class="box" @click.stop="showDesc(code)"
-                    :style="{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), ${getImageURL(project.img_url)}` }">
+                    :style="{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), ${getImageURL(project.img_url)}` }">
                     <div ref="bcnts" class="box-content" @click.stop="showDesc(code)">
                         <div class="proj-label">
                             {{ $t(`projects.${code}.title`) }}
@@ -46,6 +46,7 @@ const getImageURL = (img) => {
 
 const showDesc = (id) => {
 
+    // Get the project and the container by their respective key and idx
     const proj = toRaw(projects.value)[id];
     const bcnt = toRaw(bcnts.value)[Object.keys(projects.value).indexOf(id)];
 
@@ -89,8 +90,8 @@ const showDesc = (id) => {
 
         .box {
 
-            width: 350px;
-            height: 350px;
+            width: 450px;
+            height: 450px;
 
             display: flex;
             flex-direction: row;
@@ -100,6 +101,8 @@ const showDesc = (id) => {
 
             background-repeat: no-repeat;
             background-size: cover;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
 
             padding: 20px;
             margin: 20px;
@@ -134,8 +137,7 @@ const showDesc = (id) => {
                 }
 
                 .proj-label {
-                    font-family: "Lato", sans-serif;
-                    font-size: 24px;
+                    font-size: 35px;
                     font-weight: bold;
                     text-align: center;
                     left: 50%;
@@ -145,6 +147,7 @@ const showDesc = (id) => {
                 .proj-desc {
                     left: 150%;
                     width: 90%;
+                    font-size: 25px;
                 }
 
             }

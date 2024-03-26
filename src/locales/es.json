@@ -39,7 +39,7 @@
             "desc": "Aplicación de descarga masiva para servidores de imágenes tipo Booru."
         },
         "csflopapp": {
-            "title": "CSFlopApp",
+            "title": "CSFLopApp",
             "desc": "Aplicación privada para Android que calcula operaciones matemáticas complejas en el campo de la seguridad industrial."
         },
         "csfhazapp": {
@@ -62,7 +62,7 @@
             "title": "FIRA",
             "desc": "Un sistema dedicado al comercio electrónico en vivo donde los clientes pueden ver una presentación del producto, comentar y comprar productos en vivo con una extensa lista de métodos de pago."
         },
-        "OFTS": {
+        "ofms": {
             "title": "OFMS",
             "desc": "Sistema de Gestión en Campo, es un sistema hecho para llevar un registro y estado de los proyectos en campo para una empresa. Tiene un portal para empleados donde pueden verificar sus proyectos asignados, actualizar y verificar otros estados y hacer solicitudes especiales a la empresa mientras están en servicio en campo."
         }
