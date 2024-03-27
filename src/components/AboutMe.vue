@@ -14,18 +14,9 @@
 </template>
 
 <script setup>
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import UserSolid from '@assets/user-solid.svg';
 import Personal from '@components/AboutMe/Personal.vue';
 import TechStack from './AboutMe/TechStack.vue';
-import { onMounted } from 'vue';
-
-onMounted(() => {
-    AOS.init({
-        once: true
-    });
-});
 </script>
 
 <style lang="scss">
