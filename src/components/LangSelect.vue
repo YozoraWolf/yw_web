@@ -4,7 +4,7 @@
         <img src="https://flagcdn.com/w80/mx.png" @click="changeLang('es')" class="lang">
         <img src="https://flagcdn.com/w80/fr.png" @click="changeLang('fr')" class="lang">
         <img src="https://flagcdn.com/w80/jp.png" @click="changeLang('jp')" class="lang">
-        <img :src="getFlag(selLang)" class="sel-lang" @click="toggleLangs" >
+        <img :src="getFlag(selLang)" class="sel-lang" @click="toggleLangs">
     </div>
 </template>
 
@@ -12,6 +12,8 @@
 import { useI18n } from 'vue-i18n';
 import { onMounted, ref } from 'vue';
 import anime from 'animejs';
+
+
 
 let selLang = ref('en');
 let showLangs = ref(true);
@@ -23,8 +25,16 @@ const changeLang = (lang) => {
     selLang.value = lang;
     locale.value = lang;
     localStorage.setItem('lang', lang);
-    document.documentElement.style.setProperty('--def-font', 
-    lang === 'jp' ? 'Zen Maru Gothic' : 'Lato')
+
+    // Custom event: changeLang
+
+    dispatchEvent(new CustomEvent('changeLang', {
+        detail: {
+            lang: lang
+        }
+    }));
+    document.documentElement.style.setProperty('--def-font',
+        lang === 'jp' ? 'Zen Maru Gothic' : 'Lato')
     toggleLangs();
 }
 
@@ -42,7 +52,7 @@ const getFlag = (lang) => {
 const toggleLangs = () => {
     // Use animejs to animate fade in all class 'lang' from right
     showLangs.value = !showLangs.value;
-    if(showLangs.value) {
+    if (showLangs.value) {
         anime({
             targets: '.lang-select > .lang',
             translateX: 0,
@@ -74,31 +84,30 @@ onMounted(() => {
     initLangUI();
 
 
-}); 
+});
 
 const initLangUI = () => {
     langSelect.value.querySelectorAll('.lang').forEach((el) => {
         el.classList.add('hidden');
     });
-    
+
 
     setTimeout(() => {
         toggleLangs();
     }, 10);
-    
+
 
 
     setTimeout(() => {
         langSelect.value.querySelectorAll('.lang').forEach((el) => {
             el.classList.remove('hidden');
         });
-    }, 1000);  
+    }, 1000);
 }
 
 </script>
 
 <style lang="scss">
-
 .hidden {
     display: none;
 }
@@ -119,7 +128,7 @@ const initLangUI = () => {
     }
 
     .sel-lang {
-        
+
         background-image: url("https://flagcdn.com/w80/us.png");
         transition: 0.3s ease-in-out;
 
@@ -129,19 +138,20 @@ const initLangUI = () => {
         }
     }
 
-    .lang, .sel-lang {
+    .lang,
+    .sel-lang {
         height: 60px;
         width: 80px;
         cursor: pointer;
         user-select: none;
-        
+
         background-position: center;
-        background-size:inherit;
+        background-size: inherit;
         background-repeat: no-repeat;
         border-radius: 20%;
 
         transition: 0.3s ease-in-out;
-        
+
         &:hover {
             scale: 1.2;
             transition: 0.3s ease-in-out;

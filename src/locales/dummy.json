@@ -1,0 +1,70 @@
+{
+    "langs": {
+        "title": "",
+        "en": "",
+        "es": "",
+        "fr": "",
+        "jp": "",
+        "zh": "",
+        "de": ""
+    },
+    "welcome": {
+        "name": "",
+        "title": ""
+    },
+    "aboutme": {
+        "title": "",
+        "position": "",
+        "polyglot": "",
+        "age": "",
+        "techstack": "",
+        "frontend": "",
+        "backend": "",
+        "cloud": ""
+    },
+    "skills": {
+        "title": "",
+        "programming": "",
+        "frontend": "",
+        "backend": "",
+        "cloud": "",
+        "db": "",
+        "tools": "",
+        "others": ""
+    },
+    "projects": {
+        "title": "",
+        "downlooru": {
+            "title": "",
+            "desc": ""
+        },
+        "csflopapp": {
+            "title": "",
+            "desc": ""
+        },
+        "csfhazapp": {
+            "title": "",
+            "desc": ""
+        },
+        "botbrico": {
+            "title": "",
+            "desc": ""
+        },
+        "acuacar": {
+            "title": "",
+            "desc": ""
+        },
+        "smartgreen": {
+            "title": "",
+            "desc": ""
+        },
+        "fira": {
+            "title": "",
+            "desc": ""
+        },
+        "ofms": {
+            "title": "",
+            "desc": ""
+        }
+    }
+}

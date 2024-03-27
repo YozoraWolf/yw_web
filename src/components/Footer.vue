@@ -5,8 +5,7 @@
                 <span class="txt name"> {{ $t('welcome.name') }}</span>
                 <span class="txt ps">{{ $t('welcome.title') }}</span>
                 <span class="txt contact">
-                    <inline-svg class="icon" :src="envelope" width="20" height="20" fill="black"
-                        aria-label="envelope"></inline-svg>
+                    <EmailIcon class="icon" />
                     <span>E-Mail:</span> <span class="email" v-tooltip="{ content: tip, theme: 'wolf'}"
                         @click="onEmailClick">yozorawolf@gmail.com</span>
                 </span>
@@ -14,15 +13,15 @@
         </div>
         <div class="hr"></div>
         <div class="txt copy_cont">
-            <inline-svg v-tooltip=" {content: 'View source on Github', theme: 'wolf'}" class="icon github" @click="openGithub" :src="github" width="40" height="40" fill="black" aria-label="github"></inline-svg>
+            <GitHubIcon v-tooltip="{content: 'View on GitHub!', theme: 'wolf'}" class="icon github" @click="openGithub" />
             <span class="txt copyr">{{ $t('welcome.name') }} © 2024</span>
         </div>
     </div>
 </template>
 
 <script setup>
-import envelope from '@assets/envelope-solid.svg'
-import github from '@assets/github.svg'
+import EmailIcon from '@assets/envelope-solid.svg'
+import GitHubIcon from '@assets/github.svg'
 
 // TODO: Fix tooltip
 import { createTooltip, destroyTooltip } from 'floating-vue'

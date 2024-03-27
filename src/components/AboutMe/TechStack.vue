@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <div class="icon">
-            <inline-svg :src="layer_group" width="50" height="50" fill="black" aria-label="" class="icon"></inline-svg>
+            <LayerGroupicon class="icon" />
         </div>
         <div class="content">
             <h1 class="title">{{ $t('aboutme.techstack') }}</h1>
@@ -30,7 +30,7 @@
 </template>
   
 <script setup>
-import layer_group from '@assets/layer-group-solid.svg';
+import LayerGroupicon from '@assets/layer-group-solid.svg';
 
 const frontendIcons = ['angularjs', 'vuejs'];
 const backendIcons = ['nodejs', '.express', 'spring'];

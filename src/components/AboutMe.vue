@@ -1,7 +1,6 @@
 <template>
     <div class="container">
-        <inline-svg src="../assets/user-solid.svg" width="50" height="50" fill="black" aria-label="My image"
-            class="txt user_i"></inline-svg>
+        <UserSolid class="txt user_i"/>
         <h1 class="txt am_title">{{ $t('aboutme.title') }}</h1>
         <div class="grid">
             <div class="grid-item">
@@ -17,6 +16,7 @@
 <script setup>
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import UserSolid from '@assets/user-solid.svg';
 import Personal from '@components/AboutMe/Personal.vue';
 import TechStack from './AboutMe/TechStack.vue';
 import { onMounted } from 'vue';

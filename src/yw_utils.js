@@ -1,3 +1,5 @@
+import anime from 'animejs';
+
 // load Local JSON Async
 export const loadLocalJSONA = async (path) => {
     const response = await fetch(path);
@@ -21,3 +23,17 @@ export const loadDefaultFont = () => {
 
 // get a random number (range)
 export const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+// promisify animejs
+export const promiseAnime = (animationConfig) => {
+    return new Promise(resolve => {
+        // extend the animation config with a callback to resolve the promise
+        const configResolve= {
+            ...animationConfig,
+            complete: () => resolve()
+        };
+
+        // start the animation
+        anime(configResolve);
+    });
+};

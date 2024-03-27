@@ -1,23 +1,23 @@
 <template>
-    <div class="welcome-cont">
+    <div ref="welcomeCont" class="welcome-cont">
         <div ref="starsCont" class="stars">
-            <div v-for="star in stars" :key="star.id" :style="star.style" class="star">•</div>
+            <div v-for="star in stars" :key="star.id" :style="star.style" :class="star.class"></div>
         </div>
-            <div class="welcome-head">
-                <div class="welcome-text">
-                    <WolfLogo ref="wolfLogoRef" class="intro icon" />
-                    <div ref="titleRef" class="intro txt title"> {{ $t('welcome.name') }}</div>
-                    <h2 ref="subRef" class="intro txt sub">{{ $t('welcome.title') }}</h2>
-                </div>
+        <div class="welcome-head">
+            <div class="welcome-text">
+                <WolfLogo ref="wolfLogoRef" class="intro icon" />
+                <div ref="titleRef" class="intro txt title"> {{ $t('welcome.name') }}</div>
+                <h2 ref="subRef" class="intro txt sub">{{ $t('welcome.title') }}</h2>
             </div>
         </div>
+    </div>
 </template>
 
 <script setup>
-import WolfLogo from '@assets/wolf_logo.svg';
+import WolfLogo from '@assets/logo/wolf_logo_w.svg';
 
-import { ref, onMounted } from 'vue';
-import anime from 'animejs';
+import { ref, onMounted, nextTick, toRaw } from 'vue';
+import { promiseAnime } from '@/yw_utils';
 import { getRandomNumber } from '@/yw_utils';
 
 // Intro anim
@@ -26,62 +26,80 @@ const titleRef = ref(null);
 const subRef = ref(null);
 
 
-// TODO: Fix stars scale when resizing
-// TODO: Fix star glow effect
 // Stars gen related
+const welcomeCont = ref(null);
 const starsCont = ref(null);
 const stars = ref([]);
+
+const getStarLangClass = () => localStorage.getItem('lang') === 'jp'
+    ? 'star star-jp' : 'star star-lat';
+
 
 // Function to create stars
 const createStars = () => {
 
+    /* Note: I was about to implement another algorithm to check for adjacent 
+        stars, but decided against it as it would be too taxing for such a
+        simple effect. Plus we keep complexity to a minimum.
+    */
+    stars.value = [];
+
     // Scale cont to control padding of cont
-    const contScale = 0.95;
+    const contScale = 0.9;
+    const starSize = 4; // In pixels
     starsCont.value.style.transform = `scale(${contScale})`;
 
-    const maxWidth = starsCont.value.offsetWidth;
-    const maxHeight = starsCont.value.offsetHeight;
-    console.log("maxHeight: ", maxHeight);
+    let maxWidth = welcomeCont.value.offsetWidth;
+    let maxHeight = welcomeCont.value.offsetHeight;
+
 
     const numStars = 50;
     for (let i = 0; i < numStars; i++) {
         const x = getRandomNumber(0, maxWidth);
         const y = getRandomNumber(0, maxHeight);
-        stars.value.push({ id: i, style: { left: `${x}px`, top: `${y}px` } });
+        stars.value.push({ id: i, class: ['star', getStarLangClass()], style: { width: `${starSize}px`, height: `${starSize}px`, left: `${x}px`, top: `${y}px`, "animation-delay": `${getRandomNumber(0, 3000)}ms` } });
     }
 };
 
-
-onMounted(() => {
-    setTimeout(() => {
-        intro();
-        createStars();
-    }, 50);
+// Listen to lang change event to set the star font-size
+addEventListener('changeLang', (e) => {
+    if (starsCont.value === null) return;
+    for (const child of starsCont.value.children) {
+        child.className = [getStarLangClass()];
+    }
 });
 
-const intro = () => {
-    anime({
+
+onMounted(async () => {
+    await nextTick();
+    intro();
+    createStars();
+    window.addEventListener('resize', createStars);
+});
+
+const intro = async () => {
+    await promiseAnime({
         targets: ".icon",
         opacity: [0, 1],
-        duration: 2000,
-        easing: 'easeOutExpo',
+        duration: 500,
+        easing: 'linear',
     });
 
-    anime({
+    await promiseAnime({
         targets: titleRef.value,
         translateY: [50, 0],
         opacity: [0, 1],
-        duration: 1000,
+        duration: 500,
         delay: 500,
         easing: 'easeOutExpo',
     });
 
-    anime({
+    await promiseAnime({
         targets: subRef.value,
         translateY: [50, 0],
         opacity: [0, 1],
-        duration: 1000,
-        delay: 1000,
+        duration: 500,
+        delay: 500, 
         easing: 'easeOutExpo',
     });
 }
@@ -106,20 +124,28 @@ const intro = () => {
 
 .star {
     position: absolute;
-    width: 2px;
-    height: 2px;
     animation: pulsate 1.5s linear infinite alternate;
+    border-radius: 50%;
+    background-color: white;
 
     user-select: none;
 }
 
+.star-lat {
+    font-size: 4px;
+}
+
+.star-jp {
+    font-size: 8px;
+}
+
 @keyframes pulsate {
     0% {
-        text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+        box-shadow: 0 0 0px 0px rgba(255, 255, 255, .3);
     }
 
     100% {
-        text-shadow: 0 0 50px rgba(255, 255, 255, 1);
+        box-shadow: 0 0 15px 5px rgba(255, 255, 255, .3);
     }
 }
 
@@ -129,7 +155,7 @@ const intro = () => {
     align-items: center;
     flex-direction: column;
 
-    background-image: linear-gradient(to top, #000040, #000010);
+    background: linear-gradient(to top, #000040, #000010);
 
     overflow: hidden;
 

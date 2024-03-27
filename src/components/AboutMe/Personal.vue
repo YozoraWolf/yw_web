@@ -1,22 +1,21 @@
 <template>
     <div class="card">
         <div class="icon">
-            <inline-svg :src="user_tie" width="50" height="50" fill="black" aria-label="" class="icon"></inline-svg>
+            <UserTieIcon class="icon" />
         </div>
         <div class="content">
             <h1>{{ $t('welcome.name') }}</h1>
             <div class="title">
-                <inline-svg :src="code" width="50" height="50" fill="black" aria-label="" class="ic code"></inline-svg>
+                <CodeIcon class="ic" />
                 <h3>{{ $t('aboutme.position') }}</h3>
             </div>
             <div class="title">
-                <inline-svg :src="globe" width="50" height="50" fill="black" aria-label="" class="ic globe"></inline-svg>
+                <GlobeIcon class="ic" />
                 <h3>{{ $t('aboutme.polyglot') }}</h3>
             </div>
 
             <div class="title">
-                <inline-svg :src="birthday" width="50" height="50" fill="black" aria-label=""
-                    class="ic birthday"></inline-svg>
+                <BDayIcon class="ic" />
                 <h3>{{ $t('aboutme.age') }}</h3>
             </div>
         </div>
@@ -24,10 +23,10 @@
 </template>
   
 <script setup>
-import user_tie from '@assets/user-tie-solid.svg';
-import birthday from '@assets/cake-candles-solid.svg';
-import code from '@assets/code-solid.svg';
-import globe from '@assets/globe-solid.svg';
+import UserTieIcon from '@assets/user-tie-solid.svg';
+import BDayIcon from '@assets/cake-candles-solid.svg';
+import CodeIcon from '@assets/code-solid.svg';
+import GlobeIcon from '@assets/globe-solid.svg';
 
 </script>
   
