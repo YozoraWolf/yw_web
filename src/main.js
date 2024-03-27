@@ -9,7 +9,6 @@ import Vue3PerfectScrollbar from 'vue3-perfect-scrollbar';
 import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css';
 import { emptyObject, loadLocalJSONA } from "./yw_utils";
 
-
 // i18n needs a default message object, so we load one and make it a dummy to avoid occupying too much space if it becomes too big in the future.
 let defMess = emptyObject(
     await loadLocalJSONA(`src/locales/${localStorage.getItem('lang') || "en"}.json`)

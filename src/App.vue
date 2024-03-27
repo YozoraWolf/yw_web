@@ -22,6 +22,7 @@ import Proj from './components/Proj.vue';
 import Footer from './components/Footer.vue';
 import LangSelect from './components/LangSelect.vue';
 
+loadDefaultFont();
 
 </script>
 

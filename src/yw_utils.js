@@ -18,3 +18,6 @@ export const loadDefaultFont = () => {
     document.documentElement.style.setProperty('--def-font',
         localStorage.getItem('lang') === 'jp' ? 'Zen Maru Gothic' : 'Lato');
 }
+
+// get a random number (range)
+export const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
