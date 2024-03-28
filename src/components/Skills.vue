@@ -13,17 +13,18 @@ import Langs from "./skills/Langs.vue";
 </script>
 
 <style lang="scss">
+:root {
+    --stroke-color: #{$stroke-color};
+    --inner-stroke-color: #{$inner-stroke-color};
+}
+
+
 .s_container {
     background-color: $bg-color;
 
-    .lang_t,
-    .lang_p {
-        color: $text-color;
-    }
-
     .s_title {
         text-align: center;
-        font-family: $ffamily;
+        font-size: $title-size;
         margin-top: 40px;
     }
 }

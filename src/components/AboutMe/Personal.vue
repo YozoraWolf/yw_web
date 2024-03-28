@@ -30,7 +30,7 @@ import GlobeIcon from '@assets/globe-solid.svg';
 
 </script>
   
-<style lang="scss">
+<style scoped lang="scss">
 .card {
     display: flex;
     justify-content: center;
@@ -40,16 +40,16 @@ import GlobeIcon from '@assets/globe-solid.svg';
     margin: 10px;
 
     .icon {
-        width: 128px;
-        height: 128px;
+        width: 200px;
+        height: 200px;
         margin-right: 50px;
     }
 
     .ic {
         display: inline;
-        width: 16px;
+        width: 32px;
         height: auto;
-        margin-right: 10px;
+        margin-right: 20px;
     }
 
     .content {
@@ -57,6 +57,18 @@ import GlobeIcon from '@assets/globe-solid.svg';
         display: flex;
         flex-direction: column;
         align-items: left;
+
+        h1  {
+            font-size: 2.5rem;
+
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.5rem; 
+        }
+         
 
         .title {
             display: flex;
@@ -70,10 +82,6 @@ import GlobeIcon from '@assets/globe-solid.svg';
     h2,
     h3 {
         margin: 0;
-    }
-
-    h3 {
-        font-size: 1rem;
     }
 }
 </style>

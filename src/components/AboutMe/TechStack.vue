@@ -55,8 +55,8 @@ const getIcon = (icon) => icon[0] === '.' ? `devicon-${icon.substring(1)}-origin
     margin: 10px;
 
     .icon {
-        width: 128px;
-        height: 128px;
+        width: 200px;
+        height: 200px;
         margin-right: 50px;
     }
 
@@ -88,7 +88,7 @@ const getIcon = (icon) => icon[0] === '.' ? `devicon-${icon.substring(1)}-origin
 
             h3 {
                 margin-top: 10px;
-                font-size: 1rem;
+                font-size: 1.5rem;
                 text-align: center;
                 margin-bottom: 15px;
             }
@@ -100,7 +100,7 @@ const getIcon = (icon) => icon[0] === '.' ? `devicon-${icon.substring(1)}-origin
                 margin-top: 5px;
 
                 i {
-                    font-size: 24px;
+                    font-size: 32px;
                     margin-left: 5px;
                     margin-right: 5px;
                 }

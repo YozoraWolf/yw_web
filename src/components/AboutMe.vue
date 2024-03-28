@@ -1,6 +1,5 @@
 <template>
     <div class="container">
-        <UserSolid class="txt user_i"/>
         <h1 class="txt am_title">{{ $t('aboutme.title') }}</h1>
         <div class="grid">
             <div class="grid-item">
@@ -14,15 +13,16 @@
 </template>
 
 <script setup>
-import UserSolid from '@assets/user-solid.svg';
 import Personal from '@components/AboutMe/Personal.vue';
 import TechStack from './AboutMe/TechStack.vue';
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .container {
     width: 100%;
     height: auto;
+
+    margin-top: 25px;
 
     background-color: $bg-color;
 
@@ -30,6 +30,10 @@ import TechStack from './AboutMe/TechStack.vue';
     flex-direction: column;
 
     align-items: center;
+
+    .am_title {
+        font-size: $title-size;
+    }
 
 
     .grid {
@@ -52,15 +56,6 @@ import TechStack from './AboutMe/TechStack.vue';
         }
     }
 
-
-    .user_i {
-        background-image: url("../assets/user-solid.svg");
-        background-size: 100% 100%;
-        fill: $text-color;
-        width: 50px;
-        height: 50px;
-        margin-top: 20px;
-    }
 }
 </style>
 

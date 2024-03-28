@@ -71,6 +71,7 @@ const showDesc = (id) => {
 
     h1 {
         text-align: center;
+        font-size: $title-size;
     }
 
     .grid {
