@@ -66,5 +66,10 @@
             "title": "OFMS",
             "desc": "On-Field Management System, is a system made to keep track and status of On-Field projects for a company. It has an empoyee portal where they can check their assigned projects, update and check other statuses and make special requests to the company while on On-Field duty."
         }
+    },
+    "footer": {
+        "email": "Click here to copy my email!",
+        "copied": "Copied!",
+        "github": "View on GitHub!"
     }
 }

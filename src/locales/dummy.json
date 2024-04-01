@@ -66,5 +66,10 @@
             "title": "",
             "desc": ""
         }
+    },
+    "footer": {
+        "email": "",
+        "copied": "",
+        "github": ""
     }
 }

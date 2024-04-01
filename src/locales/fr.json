@@ -66,5 +66,10 @@
             "title": "OFMS",
             "desc": "Système de Gestion Sur le Terrain, un système conçu pour suivre et statuer sur les projets sur le terrain pour une entreprise. Il dispose d'un portail employé où ils peuvent vérifier leurs projets assignés, mettre à jour et vérifier d'autres statuts et faire des demandes spéciales à l'entreprise lorsqu'ils sont en service sur le terrain."
         }
+    },
+    "footer": {
+        "email": "Copier mon email",
+        "copied": "Copié!",
+        "github": "Voir sur GitHub"
     }
 }

@@ -6,14 +6,14 @@
                 <span class="txt ps">{{ $t('welcome.title') }}</span>
                 <span class="txt contact">
                     <EmailIcon class="icon" />
-                    <span>E-Mail:</span> <span class="email" v-tooltip="{ content: tip, theme: 'wolf'}"
-                        @click="onEmailClick">yozorawolf@gmail.com</span>
+                    <span>E-Mail:</span> <span class="email" v-tooltip="{ content: $t('footer.email'), theme: 'wolf'}"
+                        @click.stop="onEmailClick">yozorawolf@gmail.com</span>
                 </span>
             </div>
         </div>
         <div class="hr"></div>
         <div class="txt copy_cont">
-            <GitHubIcon v-tooltip="{content: 'View on GitHub!', theme: 'wolf'}" class="icon github" @click="openGithub" />
+            <GitHubIcon v-tooltip="{content: $t('footer.github'), theme: 'wolf'}" class="icon github" @click="openGithub" />
             <span class="txt copyr">{{ $t('welcome.name') }} © 2024</span>
         </div>
     </div>
@@ -23,19 +23,21 @@
 import EmailIcon from '@assets/envelope-solid.svg'
 import GitHubIcon from '@assets/github.svg'
 
-// TODO: Fix tooltip
-import { createTooltip, destroyTooltip } from 'floating-vue'
-import { ref } from 'vue'
 
-const clicked = ref(false)
-const tip = "Click to copy my email!"
+// TODO: Fix tooltip
+import { ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n';
+import { createTooltip, destroyTooltip } from 'floating-vue'
+const { t } = useI18n();    
+
+let clicked = ref(false);
 
 const onEmailClick = (event) => {
     clicked.value = true;
 
     const tooltip = createTooltip(event.target, {
         triggers: [],
-        content: 'Copied!',
+        content: t('footer.copied'),
         theme: 'wolf'
     });
     tooltip.show()

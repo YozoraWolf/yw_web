@@ -14,6 +14,7 @@ export default function setupI18n(defmess) {
       legacy: false,
       locale: locale,
       fallbackLocale: 'en',
+      mode: 'composition',
       // Quick workaround, sets dummy obj to all locales to avoid occupying too much space if its too big.
       messages: Object.fromEntries(SUPPORT_LOCALES.map(locale => [locale, defmess]))
     });
