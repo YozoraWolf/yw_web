@@ -63,3 +63,29 @@ svg path {
     font-family: $ffamily;
     font-size: 20px;
 }
+
+// Define screen sizes
+$small-screen: 578px; // small screens (phones)
+$medium-screen: 770px; // medium screens (tablets)
+$large-screen: 994px; // large screens (desktops)
+
+$font-sizes: (default: 4rem, small: 6rem, medium: 8rem, large: 10rem);
+
+// Define mixin for responsive font sizes and a respective factor to adjust based on a predefined set
+@mixin responsive-font-size($sizes, $factor: 1.0) {
+  font-size: map-get($sizes, 'default') * $factor;
+
+  @media screen and (min-width: $small-screen) {
+    font-size: map-get($sizes, 'small') * $factor !important;
+  }
+
+  @media screen and (min-width: $medium-screen) {
+    font-size: map-get($sizes, 'medium') * $factor !important;
+  }
+
+  @media screen and (min-width: $large-screen) {
+    font-size: map-get($sizes, 'large') * $factor !important;
+  }
+}
+
+// TODO: Work on the rest of components for responsive design.

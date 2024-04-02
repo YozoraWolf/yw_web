@@ -99,7 +99,7 @@ const intro = async () => {
         translateY: [50, 0],
         opacity: [0, 1],
         duration: 500,
-        delay: 500, 
+        delay: 500,
         easing: 'easeOutExpo',
     });
 }
@@ -159,6 +159,7 @@ const intro = async () => {
 
     overflow: hidden;
 
+    width: 100%;
     height: 100vh;
 
     .welcome-head {
@@ -174,10 +175,14 @@ const intro = async () => {
         .welcome-text {
             position: relative;
 
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            margin-left: 10px;
+            margin-right: 10px;
 
             z-index: 1;
 
@@ -194,6 +199,7 @@ const intro = async () => {
 
             .title,
             .sub {
+
                 margin: 5px;
                 background-color: transparent;
 
@@ -201,17 +207,16 @@ const intro = async () => {
             }
 
             .title {
-                color: white;
-                font-family: $ffamily;
-                font-size: 120px;
-                font-weight: 300;
+                @include responsive-font-size($font-sizes);
 
+                font-weight: 300;
                 text-align: center;
             }
 
             .sub {
                 @extend .title;
-                font-size: 80px;
+                @include responsive-font-size($font-sizes, .6);
+                
                 font-weight: normal;
             }
         }
