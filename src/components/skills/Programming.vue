@@ -53,7 +53,7 @@ const getIcon = (icon) => icon[0] === '.' ? `devicon-${icon.substring(1)}-origin
 
     h3 {
         width: fit-content;
-        font-size: 24px;
+        font-size: 2.5rem;
         font-weight: bold;
         margin-bottom: 10px;
         flex: 0;

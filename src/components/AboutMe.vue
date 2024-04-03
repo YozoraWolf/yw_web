@@ -41,18 +41,21 @@ import TechStack from './AboutMe/TechStack.vue';
         width: 100%;
         height: 100%;
 
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
         grid-gap: 20px;
-
+        grid-auto-flow: row;
 
 
         .grid-item {
             display: flex;
             justify-content: center;
+            align-items: center;
 
             width: 100%;
             height: 100%;
             background-color: $bg-color;
+
+            box-sizing: border-box;
         }
     }
 

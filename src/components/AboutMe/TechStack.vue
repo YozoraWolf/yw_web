@@ -54,6 +54,17 @@ const getIcon = (icon) => icon[0] === '.' ? `devicon-${icon.substring(1)}-origin
     padding: 10px;
     margin: 10px;
 
+    @media screen and (max-width: 670px) {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .icon {
+            margin-right: 0px !important;
+            margin-bottom: 10px;
+        }
+    }
+
     .icon {
         width: 200px;
         height: 200px;

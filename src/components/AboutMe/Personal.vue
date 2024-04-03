@@ -39,6 +39,16 @@ import GlobeIcon from '@assets/globe-solid.svg';
     padding: 10px;
     margin: 10px;
 
+    
+    @media screen and (max-width: 670px) {
+        flex-direction: column;
+
+        .icon {
+            margin-right: 0px !important;
+            margin-bottom: 10px;
+        }
+    }
+
     .icon {
         width: 200px;
         height: 200px;

@@ -76,9 +76,18 @@ const showDesc = (id) => {
 
     .grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(700px, 3fr));
+        grid-gap: 3px;
+        grid-auto-flow: row;
         gap: 5px;
         margin-bottom: 5%;
+
+        @media screen and (max-width: 670px){
+
+            .box-cont{
+                transform: scale(.4);
+            }
+        }
     }
 
     .box-cont {
