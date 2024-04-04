@@ -61,7 +61,6 @@ onMounted(() => {
 });
 
 const getImageURL = (imgName) => {
-    console.log(bgs.hasOwnProperty(imgName) ? bgs[imgName] : null)
     return bgs.hasOwnProperty(imgName) ? bgs[imgName] : null;
 };
 

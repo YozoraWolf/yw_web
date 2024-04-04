@@ -37,7 +37,6 @@ export default function setupI18n(defmess) {
 }
 
 export async function setI18nLanguage(i18n, locale) {
-  console.log("locale: ", locale);
   await loadLocaleMessages(i18n, i18n.global.locale.value);
   if (i18n.mode === 'legacy') {
     i18n.global.locale = locale;
