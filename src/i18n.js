@@ -1,7 +1,11 @@
 import { nextTick, watchEffect } from 'vue';
 import { createI18n } from 'vue-i18n';
-import { loadLocalJSONA } from './yw_utils';
+import en from '@locales/en.json';
+import es from '@locales/es.json';
+import fr from '@locales/fr.json';
+import jp from '@locales/jp.json';
 export const SUPPORT_LOCALES = ['en', 'es', 'fr', 'jp'];
+const langs = { "en": en, "es": es, "fr": fr, "jp": jp };
 
 export default function setupI18n(defmess) {
   let i18n;
@@ -49,7 +53,7 @@ export async function setI18nLanguage(i18n, locale) {
 // TODO: Fix locale messages loading
 export async function loadLocaleMessages(i18n, locale) {
   // load locale messages with dynamic import
-  const messages = await loadLocalJSONA(`src/locales/${locale}.json`);
+  const messages = langs[locale];
 
   // set locale and locale message
   i18n.global.setLocaleMessage(locale, messages);

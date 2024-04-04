@@ -4,7 +4,7 @@
         <div class="grid">
             <div class="box-cont" v-for="(project, code) in projects" :key="project.id">
                 <div class="box" @click.stop="showDesc(code)"
-                    :style="{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), ${getImageURL(project.img_url)}` }">
+                    :style="{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${getImageURL(project.img_url)})`}">
                     <div ref="bcnts" class="box-content" @click.stop="showDesc(code)">
                         <div class="proj-label">
                             {{ $t(`projects.${code}.title`) }}
@@ -29,6 +29,26 @@ import { ref, onMounted, toRaw } from 'vue';
 import anime from 'animejs';
 import projectsData from '@data/projects.json';
 
+import downlooruBg from "@assets/bgs/code0.jpg";
+import csflopappBg from "@assets/bgs/code1.jpg";
+import csfhazappBg from "@assets/bgs/code2.jpg";
+import botbricoBg from "@assets/bgs/chatbot.jpg";
+import acuacarBg from "@assets/bgs/meter.jpg";
+import smartgreenBg from "@assets/bgs/sprinklers.jpg";
+import firaBg from "@assets/bgs/live.jpg";
+import ofmsBg from "@assets/bgs/main5.jpg";
+
+let bgs = {
+    "code0.jpg": downlooruBg,
+    "code1.jpg": csflopappBg,
+    "code2.jpg": csfhazappBg,
+    "chatbot.jpg": botbricoBg,
+    "meter.jpg": acuacarBg,
+    "sprinklers.jpg": smartgreenBg,
+    "live.jpg": firaBg,
+    "main5.jpg": ofmsBg
+};
+
 let projects = ref([]);
 const bcnts = ref([]);
 
@@ -40,9 +60,10 @@ onMounted(() => {
     }, {});
 });
 
-const getImageURL = (img) => {
-    return `url('src/assets/bgs/${img}')`;
-}
+const getImageURL = (imgName) => {
+    console.log(bgs.hasOwnProperty(imgName) ? bgs[imgName] : null)
+    return bgs.hasOwnProperty(imgName) ? bgs[imgName] : null;
+};
 
 const showDesc = (id) => {
 
