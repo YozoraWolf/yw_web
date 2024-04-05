@@ -100,6 +100,7 @@ const showDesc = (id) => {
         grid-gap: 3px;
         grid-auto-flow: row;
         margin-bottom: 5%;
+        place-items: center;
     }
 
     .box-cont {
