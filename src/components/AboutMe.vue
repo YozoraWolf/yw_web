@@ -56,6 +56,11 @@ import TechStack from './AboutMe/TechStack.vue';
             background-color: $bg-color;
 
             box-sizing: border-box;
+
+            @media screen and (max-width: 670px) {
+                width: 100vw;
+                
+            }
         }
     }
 

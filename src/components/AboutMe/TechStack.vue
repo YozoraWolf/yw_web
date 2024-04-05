@@ -55,8 +55,6 @@ const getIcon = (icon) => icon[0] === '.' ? `devicon-${icon.substring(1)}-origin
     margin: 10px;
 
     @media screen and (max-width: 670px) {
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
 
         .icon {
@@ -68,7 +66,7 @@ const getIcon = (icon) => icon[0] === '.' ? `devicon-${icon.substring(1)}-origin
     .icon {
         width: 200px;
         height: 200px;
-        margin-right: 50px;
+        margin-right: 20px; // Adjusted margin for spacing
     }
 
     .content {
@@ -86,15 +84,15 @@ const getIcon = (icon) => icon[0] === '.' ? `devicon-${icon.substring(1)}-origin
 
         .stacks {
             display: flex;
-            justify-content: space-between;
-
-            white-space: nowrap;
+            justify-content: space-around; // Adjusted spacing for stacks
+            flex-wrap: wrap; // Allows stacks to wrap to the next line if necessary
 
             .frontend-stack,
             .backend-stack {
-                margin-left: 20px;
-                margin-right: 20px;
+                margin-bottom: 20px; // Adjusted margin for stack items
                 flex: 1;
+                max-width: 200px; // Maximum width for stack items
+                display: inline-block; // Display next to each other
             }
 
             h3 {
@@ -106,7 +104,7 @@ const getIcon = (icon) => icon[0] === '.' ? `devicon-${icon.substring(1)}-origin
 
             .icon-row {
                 display: flex;
-                justify-content: space-around;
+                justify-content: center; // Centering icons horizontally
                 align-items: center;
                 margin-top: 5px;
 
@@ -126,4 +124,3 @@ const getIcon = (icon) => icon[0] === '.' ? `devicon-${icon.substring(1)}-origin
     }
 }
 </style>
-  

@@ -23,9 +23,7 @@
 import EmailIcon from '@assets/envelope-solid.svg'
 import GitHubIcon from '@assets/github.svg'
 
-
-// TODO: Fix tooltip
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n';
 import { createTooltip, destroyTooltip } from 'floating-vue'
 const { t } = useI18n();    
@@ -63,6 +61,8 @@ const openGithub = () => {
     height: auto;
     padding-bottom: 10px;
 
+
+
     .icon {
         width: 25px;
         height: 25px;
@@ -71,18 +71,20 @@ const openGithub = () => {
 
         .section_one {
             .contact_info {
-                margin-left: 15px;
                 display: flex;
                 flex-direction: column;
 
+                margin-left: 15px;
+                margin-bottom: 20px;
+
                 .name {
                     font-family: $ffamily;
-                    font-size: 40px;
+                    font-size: 2.5rem;
                     margin-top: 10px;
                 }
 
                 .ps {
-                    font-size: 25px;
+                    font-size: 2rem;
                     margin-top: -5px;
                 }
 
@@ -99,11 +101,11 @@ const openGithub = () => {
                     }
 
                     span {
-                        font-size: 20px;
+                        font-size: 2rem;
                     }
 
                     .email {
-                        font-size: 25px;
+                        font-size: 2rem;
                         color: $text-color;
                         cursor: pointer;
 
@@ -114,6 +116,31 @@ const openGithub = () => {
                             text-decoration: underline;
                         }
                     }
+                }
+
+                @media screen and (max-width: 550px) {
+                    .name {
+                        font-size: 2rem;
+                    }
+
+                    .ps {
+                        font-size: 1.5rem;
+                    }
+
+                    .contact {
+                        .icon {
+                            margin-right: 5px;
+                        }
+
+                        span {
+                            font-size: 1rem;
+                        }
+
+                        .email {
+                            font-size: 1rem;
+                        }
+                    }
+                    
                 }
             }
         }
@@ -141,9 +168,13 @@ const openGithub = () => {
                 font-size: 25px;
                 margin-right: 10px;
             }
-        }
 
-        .empty {
-            height: 5px;
+            @media screen and (max-width: 550px) {
+                margin-bottom: 50px;
+
+                .copyr {
+                    font-size: 1rem;
+                }
+            }
         }
     }</style>

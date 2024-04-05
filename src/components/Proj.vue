@@ -4,13 +4,13 @@
         <div class="grid">
             <div class="box-cont" v-for="(project, code) in projects" :key="project.id">
                 <div class="box" @click.stop="showDesc(code)"
-                    :style="{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${getImageURL(project.img_url)})`}">
+                    :style="{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${getImageURL(project.img_url)})` }">
                     <div ref="bcnts" class="box-content" @click.stop="showDesc(code)">
                         <div class="proj-label">
                             {{ $t(`projects.${code}.title`) }}
                         </div>
                         <div class="proj-desc">
-                            {{ $t(`projects.${code}.desc`)  }}
+                            {{ $t(`projects.${code}.desc`) }}
                         </div>
                     </div>
                 </div>
@@ -96,18 +96,10 @@ const showDesc = (id) => {
 
     .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(700px, 3fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
         grid-gap: 3px;
         grid-auto-flow: row;
-        gap: 5px;
         margin-bottom: 5%;
-
-        @media screen and (max-width: 670px){
-
-            .box-cont{
-                transform: scale(.4);
-            }
-        }
     }
 
     .box-cont {
@@ -115,13 +107,17 @@ const showDesc = (id) => {
         width: auto;
         overflow: hidden;
 
-        margin: 0 auto;
-
 
         .box {
 
             width: 450px;
+            max-width: 100%;
             height: 450px;
+
+            @media screen and (max-width: 550px) {
+                width: 100vw;
+                max-width: 80vw;
+            }
 
             display: flex;
             flex-direction: row;
@@ -167,7 +163,7 @@ const showDesc = (id) => {
                 }
 
                 .proj-label {
-                    font-size: 35px;
+                    font-size: 2.5rem;
                     font-weight: bold;
                     text-align: center;
                     left: 50%;
@@ -177,7 +173,18 @@ const showDesc = (id) => {
                 .proj-desc {
                     left: 150%;
                     width: 90%;
-                    font-size: 25px;
+                    font-size: 2rem;
+                }
+
+                @media screen and (max-width: 550px) {
+                    .proj-label {
+                        font-size: 2rem;
+                    }
+
+                    .proj-desc {
+                        font-size: 1rem;
+                        margin-left: 5px;
+                    }
                 }
 
             }

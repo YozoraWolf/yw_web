@@ -87,5 +87,3 @@ $font-sizes: (default: 4rem, small: 6rem, medium: 8rem, large: 10rem);
     font-size: map-get($sizes, 'large') * $factor !important;
   }
 }
-
-// TODO: Work on the rest of components for responsive design.
